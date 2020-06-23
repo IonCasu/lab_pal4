@@ -1,0 +1,4 @@
+net_address.c:28:8:net_ntoa_r	56	static
+net_address.c:71:8:net_ntoa	16	static
+net_address.c:82:5:net_aton	56	static
+net_address.c:189:5:net_aton_r	24	static

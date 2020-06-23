@@ -1,0 +1,5 @@
+timer_interface.c:39:6:TimerIsExpired	16	static
+timer_interface.c:43:6:TimerCountdownMS	24	static
+timer_interface.c:54:10:TimerLeftMS	24	static
+timer_interface.c:67:6:TimerCountdown	24	static
+timer_interface.c:78:6:TimerInit	16	static

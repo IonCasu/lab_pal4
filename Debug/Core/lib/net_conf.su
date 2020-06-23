@@ -1,0 +1,12 @@
+net_conf.c:138:13:SPI_WIFI_MspInit	56	static
+net_conf.c:210:15:SPI_WIFI_Init	24	static
+net_conf.c:267:15:SPI_WIFI_ResetModule	24	static
+net_conf.c:303:15:SPI_WIFI_DeInit	8	static
+net_conf.c:326:5:wait_cmddata_rdy_high	24	static
+net_conf.c:341:5:wait_cmddata_rdy_rising_event	24	static
+net_conf.c:358:5:wait_spi_rx_event	24	static
+net_conf.c:375:5:wait_spi_tx_event	24	static
+net_conf.c:394:9:SPI_WIFI_ReceiveData	32	static
+net_conf.c:453:9:SPI_WIFI_SendData	32	static
+net_conf.c:502:6:SPI_WIFI_DelayUs	32	static
+net_conf.c:578:9:wifi_probe	24	static
