@@ -48,10 +48,9 @@
 #define DEBUG_LEVEL 1
 
 /* Update SSID and PASSWORD with own Access point settings */
-uint8_t RemoteIP[] = {192,168,1,129};
 #define RemotePORT	4433
 #define SERVER_PORT "4433"
-#define SERVER_NAME "localhost"
+#define SERVER_NAME "192.168.1.129"
 #define WIFI_WRITE_TIMEOUT 10000
 #define WIFI_READ_TIMEOUT  10000
 #define WRITE_BUF_SIZE	100
@@ -276,8 +275,8 @@ int main(void)
    */
   TERMOUT( "> Connecting to tcp/%s/%s...\n\n", SERVER_NAME, SERVER_PORT );
 
-  if( ( ret = mbedtls_net_connect( &server_fd, RemoteIP,
-                                       RemotePORT, MBEDTLS_NET_PROTO_TCP ) ) != 0 )
+  if( ( ret = mbedtls_net_connect( &server_fd, (uint8_t *)SERVER_NAME,
+                                       RemotePORT, WIFI_TCP_PROTOCOL) ) != 0 )
   {
 	  TERMOUT( " failed\n  ! mbedtls_net_connect returned %d\n", ret );
   }
@@ -311,7 +310,7 @@ int main(void)
       TERMOUT( " failed\n  ! mbedtls_ssl_setup returned %d\n", ret );
   }
 
-  if( ( ret = mbedtls_ssl_set_hostname( &ssl, SERVER_NAME ) ) != 0 )
+  if( ( ret = mbedtls_ssl_set_hostname( &ssl, "localhost" ) ) != 0 )
   //if( ( ret = mbedtls_ssl_set_hostname( &ssl, "PolarSSL Test CA" ) ) != 0 )
   {
       TERMOUT( " failed\n  ! mbedtls_ssl_set_hostname returned %d\n", ret );

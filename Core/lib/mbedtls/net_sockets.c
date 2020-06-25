@@ -678,9 +678,8 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
 {
 	uint8_t  MAC_Addr[6];
 	uint8_t  IP_Addr[4];
+	uint8_t  server_addr[4];
 	uint8_t  Trials = 4;
-
-	proto = WIFI_TCP_PROTOCOL;
 
 	TERMOUT("****** WIFI Module in TCP Client mode demonstration ****** \n\n");
 
@@ -700,7 +699,6 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
 	    else
 	    {
 	      TERMOUT("> ERROR : CANNOT get MAC address\n");
-	      //BSP_LED_On(LED2);
 	    }
 
 	    if( WIFI_Connect(SSID, PASSWORD, WIFI_ECN_WPA2_PSK) == WIFI_STATUS_OK)
@@ -714,16 +712,26 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
 	               IP_Addr[2],
 	               IP_Addr[3]);
 
+		    if(WIFI_GetHostAddress((const char *)host, server_addr) == WIFI_STATUS_OK)
+		    {
+		    	TERMOUT("> Host address resolved\n");
+		    }
+		    else
+		    {
+		    	TERMOUT("> ERROR : CANNOT get host address\n");
+		    }
+
+
 	        TERMOUT("> Trying to connect to Server: %d.%d.%d.%d:%d ...\n",
-	               host[0],
-				   host[1],
-				   host[2],
-				   host[3],
+	        		server_addr[0],
+					server_addr[1],
+					server_addr[2],
+					server_addr[3],
 				   port);
 
 	        while (Trials--)
 	        {
-	          if( WIFI_OpenClientConnection(0, proto, "TCP_CLIENT", host, port, 0) == WIFI_STATUS_OK)
+	          if( WIFI_OpenClientConnection(0, proto, "TCP_CLIENT", server_addr, port, 0) == WIFI_STATUS_OK)
 	          {
 	            TERMOUT("> TCP Connection opened successfully.\n");
 	            ctx->fd = 0;
