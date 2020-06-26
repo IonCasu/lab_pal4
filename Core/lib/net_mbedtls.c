@@ -489,7 +489,7 @@ static void mbedtls_free_resource(net_socket_t *sock)
  *                 requires a different strategy.
  */
 
-int mbedtls_net_recv(void *ctx, unsigned char* buffer, size_t len, uint32_t timeout) {
+int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t timeout) {
 
 	int ret;
 	uint16_t receivedlen;
@@ -549,7 +549,7 @@ int mbedtls_net_recv(void *ctx, unsigned char* buffer, size_t len, uint32_t time
  *                 MBEDTLS_ERR_SSL_WANT_WRITE indicates write() would block.
  */
 
-int mbedtls_net_send(void *ctx,const unsigned char* buffer, size_t len) {
+int mbedtls_net_send(void *ctx,const unsigned char *buffer, size_t len) {
 
 	int ret;
 	uint16_t wrotelen;

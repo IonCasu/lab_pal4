@@ -58,7 +58,7 @@
 #include "es_wifi_conf.h"
 
 /* Exported Constants --------------------------------------------------------*/
-#define ES_WIFI_PAYLOAD_SIZE     1200
+#define ES_WIFI_PAYLOAD_SIZE     1400
 /* Exported macro-------------------------------------------------------------*/
 #define MIN(a, b)  ((a) < (b) ? (a) : (b))
 

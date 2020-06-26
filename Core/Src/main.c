@@ -62,49 +62,6 @@
 #define TERMOUT(...)
 #endif
 
-#define ca_cert									   					   	   \
-	"-----BEGIN CERTIFICATE-----\r\n" 								 	   \
-	"MIIDQjCCAiqgAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRIwEAYDVQQDDAlsb2Nh\r\n" \
-	"bGhvc3QxFzAVBgNVBAoMDm15b3JnYW5pemF0aW9uMQswCQYDVQQGEwJOTDAeFw0y\r\n" \
-	"MDAxMDEwMDAwMDBaFw0yMTEyMzEyMzU5NTlaMDoxEjAQBgNVBAMMCWxvY2FsaG9z\r\n" \
-	"dDEXMBUGA1UECgwObXlvcmdhbml6YXRpb24xCzAJBgNVBAYTAk5MMIIBIjANBgkq\r\n" \
-	"hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5R/XfHLERFGsV/rlbLQ0qDZS9W8o7bQK\r\n" \
-	"T63kVgR4/4+9sWgOqDM4OIv4Y6m3LQ2oxqKAVFSQJ5m+KqA5c7oO464KkGCK3i/i\r\n" \
-	"fnl/5sraNsgxrSRSTOPboQ9KNW3BssBXyECAXTUuW43P0mxisXv7Oe+yVTIZaVEh\r\n" \
-	"3r7rIOLyxewWYDauST98apqhK+MRc+H8zGKkqy64mgcRK9xkaLalzudguaTS8gcc\r\n" \
-	"XP+l32n1THJEj6/Q1PoeK4tAgqDdngV/Z8nBniv9VCxG+pYukJ/6dB9u9LLPL0oI\r\n" \
-	"Lp8p0LI9SDKJqns8MfaTeUJ/ub/rY7E0WOneYs9UlUN524ziUwTGQwIDAQABo1Mw\r\n" \
-	"UTAPBgNVHRMECDAGAQH/AgEAMB0GA1UdDgQWBBTsiPRR8fzUM+X309HWu1+VOZkQ\r\n" \
-	"RTAfBgNVHSMEGDAWgBTsiPRR8fzUM+X309HWu1+VOZkQRTANBgkqhkiG9w0BAQsF\r\n" \
-	"AAOCAQEANUxAiSOR7Rpf5K0cG6n6eMmd37S3AiVmXYxEbz4ZOnTMzmxcVS8UbMLQ\r\n" \
-	"ZqI8rVuj4+P+cePOgnp/FqaD24OdJ1TME/T20476WKFDem6MwRkrcXzvoFFbaLKQ\r\n" \
-	"PhDi0TBWhS3Pep7+SpuhFowRDwzozCemzBkS30yMcXWVs1f92/IwRFWhScI8sT+M\r\n" \
-	"UQpXXeqL7BWkLTGI9EgldDfuEg9/Bet6OXahF3LnoM3I+NzCavc2LlJtA5sdafJW\r\n" \
-	"H7WhCfqQc8QClsOaJs1r9cn4QTYucoux4IaUeK1xLvLeELVMmtSAzfqeX0Yyu3MD\r\n" \
-	"/LWsuxQHsRyN4FFLpsMhrxHc+5OMeQ==\r\n" 								   \
-	"-----END CERTIFICATE-----\r\n"
-
-/*	"-----BEGIN CERTIFICATE-----\r\n"                                      \
-    "MIIDQTCCAimgAwIBAgIBAzANBgkqhkiG9w0BAQsFADA7MQswCQYDVQQGEwJOTDER\r\n" \
-    "MA8GA1UECgwIUG9sYXJTU0wxGTAXBgNVBAMMEFBvbGFyU1NMIFRlc3QgQ0EwHhcN\r\n" \
-    "MTkwMjEwMTQ0NDAwWhcNMjkwMjEwMTQ0NDAwWjA7MQswCQYDVQQGEwJOTDERMA8G\r\n" \
-    "A1UECgwIUG9sYXJTU0wxGTAXBgNVBAMMEFBvbGFyU1NMIFRlc3QgQ0EwggEiMA0G\r\n" \
-    "CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDA3zf8F7vglp0/ht6WMn1EpRagzSHx\r\n" \
-    "mdTs6st8GFgIlKXsm8WL3xoemTiZhx57wI053zhdcHgH057Zk+i5clHFzqMwUqny\r\n" \
-    "50BwFMtEonILwuVA+T7lpg6z+exKY8C4KQB0nFc7qKUEkHHxvYPZP9al4jwqj+8n\r\n" \
-    "YMPGn8u67GB9t+aEMr5P+1gmIgNb1LTV+/Xjli5wwOQuvfwu7uJBVcA0Ln0kcmnL\r\n" \
-    "R7EUQIN9Z/SG9jGr8XmksrUuEvmEF/Bibyc+E1ixVA0hmnM3oTDPb5Lc9un8rNsu\r\n" \
-    "KNF+AksjoBXyOGVkCeoMbo4bF6BxyLObyavpw/LPh5aPgAIynplYb6LVAgMBAAGj\r\n" \
-    "UDBOMAwGA1UdEwQFMAMBAf8wHQYDVR0OBBYEFLRa5KWz3tJS9rnVppUP6z68x/3/\r\n" \
-    "MB8GA1UdIwQYMBaAFLRa5KWz3tJS9rnVppUP6z68x/3/MA0GCSqGSIb3DQEBCwUA\r\n" \
-    "A4IBAQA4qFSCth2q22uJIdE4KGHJsJjVEfw2/xn+MkTvCMfxVrvmRvqCtjE4tKDl\r\n" \
-    "oK4MxFOek07oDZwvtAT9ijn1hHftTNS7RH9zd/fxNpfcHnMZXVC4w4DNA1fSANtW\r\n" \
-    "5sY1JB5Je9jScrsLSS+mAjyv0Ow3Hb2Bix8wu7xNNrV5fIf7Ubm+wt6SqEBxu3Kb\r\n" \
-    "+EfObAT4huf3czznhH3C17ed6NSbXwoXfby7stWUDeRJv08RaFOykf/Aae7bY5PL\r\n" \
-    "yTVrkAnikMntJ9YI+hNNYt3inqq11A5cN0+rVTst8UKCxzQ4GpvroSwPKTFkbMw4\r\n" \
-    "/anT1dVxr/BtwJfiESoK3/4CeXR1\r\n"                                     \
-    "-----END CERTIFICATE-----\r\n"*/
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -128,6 +85,62 @@ mbedtls_ssl_context ssl;
 mbedtls_ssl_config conf;
 mbedtls_x509_crt cacert;
 
+//key-size: 2048
+/*const unsigned char certificate[] =
+		"-----BEGIN CERTIFICATE-----\r\n" 								 	   \
+		"MIIDQjCCAiqgAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRIwEAYDVQQDDAlsb2Nh\r\n" \
+		"bGhvc3QxFzAVBgNVBAoMDm15b3JnYW5pemF0aW9uMQswCQYDVQQGEwJOTDAeFw0y\r\n" \
+		"MDAxMDEwMDAwMDBaFw0yMTEyMzEyMzU5NTlaMDoxEjAQBgNVBAMMCWxvY2FsaG9z\r\n" \
+		"dDEXMBUGA1UECgwObXlvcmdhbml6YXRpb24xCzAJBgNVBAYTAk5MMIIBIjANBgkq\r\n" \
+		"hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5R/XfHLERFGsV/rlbLQ0qDZS9W8o7bQK\r\n" \
+		"T63kVgR4/4+9sWgOqDM4OIv4Y6m3LQ2oxqKAVFSQJ5m+KqA5c7oO464KkGCK3i/i\r\n" \
+		"fnl/5sraNsgxrSRSTOPboQ9KNW3BssBXyECAXTUuW43P0mxisXv7Oe+yVTIZaVEh\r\n" \
+		"3r7rIOLyxewWYDauST98apqhK+MRc+H8zGKkqy64mgcRK9xkaLalzudguaTS8gcc\r\n" \
+		"XP+l32n1THJEj6/Q1PoeK4tAgqDdngV/Z8nBniv9VCxG+pYukJ/6dB9u9LLPL0oI\r\n" \
+		"Lp8p0LI9SDKJqns8MfaTeUJ/ub/rY7E0WOneYs9UlUN524ziUwTGQwIDAQABo1Mw\r\n" \
+		"UTAPBgNVHRMECDAGAQH/AgEAMB0GA1UdDgQWBBTsiPRR8fzUM+X309HWu1+VOZkQ\r\n" \
+		"RTAfBgNVHSMEGDAWgBTsiPRR8fzUM+X309HWu1+VOZkQRTANBgkqhkiG9w0BAQsF\r\n" \
+		"AAOCAQEANUxAiSOR7Rpf5K0cG6n6eMmd37S3AiVmXYxEbz4ZOnTMzmxcVS8UbMLQ\r\n" \
+		"ZqI8rVuj4+P+cePOgnp/FqaD24OdJ1TME/T20476WKFDem6MwRkrcXzvoFFbaLKQ\r\n" \
+		"PhDi0TBWhS3Pep7+SpuhFowRDwzozCemzBkS30yMcXWVs1f92/IwRFWhScI8sT+M\r\n" \
+		"UQpXXeqL7BWkLTGI9EgldDfuEg9/Bet6OXahF3LnoM3I+NzCavc2LlJtA5sdafJW\r\n" \
+		"H7WhCfqQc8QClsOaJs1r9cn4QTYucoux4IaUeK1xLvLeELVMmtSAzfqeX0Yyu3MD\r\n" \
+		"/LWsuxQHsRyN4FFLpsMhrxHc+5OMeQ==\r\n" 								   \
+		"-----END CERTIFICATE-----\r\n";*/
+
+//key-size: 4096
+const unsigned char certificate[] =
+		"-----BEGIN CERTIFICATE-----\r\n" 									   \
+		"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\r\n" \
+		"rqfkhnKu\r\n" 														   \
+		"-----END CERTIFICATE-----\r\n";
 
 /* USER CODE END PV */
 
@@ -261,7 +274,7 @@ int main(void)
 
   /*ret = mbedtls_x509_crt_parse( &cacert, (const unsigned char *) mbedtls_test_cas_pem,
 						mbedtls_test_cas_pem_len );*/
-  ret = mbedtls_x509_crt_parse( &cacert, (const unsigned char *) ca_cert, sizeof( ca_cert ) );
+  ret = mbedtls_x509_crt_parse( &cacert, certificate, sizeof( certificate ) );
 
   if( ret < 0 )
   {

@@ -22189,473 +22189,476 @@ LOAD /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
 .iplt           0x000000000803e438        0x0
  .iplt          0x000000000803e438        0x0 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x000000000803e438     0xc208
+.rodata         0x000000000803e438     0xc4c0
                 0x000000000803e438                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000803e438      0x82e Core/Src/main.o
- *fill*         0x000000000803ec66        0x2 
- .rodata        0x000000000803ec68      0x33a Core/lib/mbedtls/cipher_wrap.o
- *fill*         0x000000000803efa2        0x2 
- .rodata        0x000000000803efa4       0xf0 Core/lib/mbedtls/debug.o
- .rodata        0x000000000803f094       0x11 Core/lib/mbedtls/ecdsa.o
- *fill*         0x000000000803f0a5        0x3 
- .rodata        0x000000000803f0a8      0x288 Core/lib/mbedtls/ecp.o
- .rodata        0x000000000803f330       0x6d Core/lib/mbedtls/ecp_curves.o
- *fill*         0x000000000803f39d        0x3 
- .rodata        0x000000000803f3a0       0x37 Core/lib/mbedtls/md_wrap.o
- *fill*         0x000000000803f3d7        0x1 
- .rodata        0x000000000803f3d8      0x26d Core/lib/mbedtls/net_sockets.o
- *fill*         0x000000000803f645        0x3 
- .rodata        0x000000000803f648      0xc08 Core/lib/mbedtls/oid.o
- .rodata        0x0000000008040250       0x9b Core/lib/mbedtls/pem.o
- *fill*         0x00000000080402eb        0x1 
- .rodata        0x00000000080402ec        0xb Core/lib/mbedtls/pk.o
- *fill*         0x00000000080402f7        0x1 
- .rodata        0x00000000080402f8       0x38 Core/lib/mbedtls/pk_wrap.o
- .rodata        0x0000000008040330      0x19b Core/lib/mbedtls/pkparse.o
- *fill*         0x00000000080404cb        0x1 
- .rodata        0x00000000080404cc       0x36 Core/lib/mbedtls/rsa_internal.o
- *fill*         0x0000000008040502        0x2 
- .rodata        0x0000000008040504     0x15a8 Core/lib/mbedtls/ssl_ciphersuites.o
- .rodata        0x0000000008041aac     0x11e5 Core/lib/mbedtls/ssl_cli.o
- *fill*         0x0000000008042c91        0x3 
- .rodata        0x0000000008042c94     0x1522 Core/lib/mbedtls/ssl_tls.o
- *fill*         0x00000000080441b6        0x2 
- .rodata        0x00000000080441b8       0xb0 Core/lib/mbedtls/x509.o
- .rodata        0x0000000008044268      0x76c Core/lib/mbedtls/x509_crt.o
- .rodata        0x00000000080449d4      0x4c6 Core/lib/wifi_Src/es_wifi.o
+ .rodata        0x000000000803e438      0x36e Core/Src/main.o
+ *fill*         0x000000000803e7a6        0x2 
+ .rodata        0x000000000803e7a8      0x33a Core/lib/mbedtls/cipher_wrap.o
+ *fill*         0x000000000803eae2        0x2 
+ .rodata        0x000000000803eae4       0xf0 Core/lib/mbedtls/debug.o
+ .rodata        0x000000000803ebd4       0x11 Core/lib/mbedtls/ecdsa.o
+ *fill*         0x000000000803ebe5        0x3 
+ .rodata        0x000000000803ebe8      0x288 Core/lib/mbedtls/ecp.o
+ .rodata        0x000000000803ee70       0x6d Core/lib/mbedtls/ecp_curves.o
+ *fill*         0x000000000803eedd        0x3 
+ .rodata        0x000000000803eee0       0x37 Core/lib/mbedtls/md_wrap.o
+ *fill*         0x000000000803ef17        0x1 
+ .rodata        0x000000000803ef18      0x26d Core/lib/mbedtls/net_sockets.o
+ *fill*         0x000000000803f185        0x3 
+ .rodata        0x000000000803f188      0xc08 Core/lib/mbedtls/oid.o
+ .rodata        0x000000000803fd90       0x9b Core/lib/mbedtls/pem.o
+ *fill*         0x000000000803fe2b        0x1 
+ .rodata        0x000000000803fe2c        0xb Core/lib/mbedtls/pk.o
+ *fill*         0x000000000803fe37        0x1 
+ .rodata        0x000000000803fe38       0x38 Core/lib/mbedtls/pk_wrap.o
+ .rodata        0x000000000803fe70      0x19b Core/lib/mbedtls/pkparse.o
+ *fill*         0x000000000804000b        0x1 
+ .rodata        0x000000000804000c       0x36 Core/lib/mbedtls/rsa_internal.o
+ *fill*         0x0000000008040042        0x2 
+ .rodata        0x0000000008040044     0x15a8 Core/lib/mbedtls/ssl_ciphersuites.o
+ .rodata        0x00000000080415ec     0x11e5 Core/lib/mbedtls/ssl_cli.o
+ *fill*         0x00000000080427d1        0x3 
+ .rodata        0x00000000080427d4     0x1522 Core/lib/mbedtls/ssl_tls.o
+ *fill*         0x0000000008043cf6        0x2 
+ .rodata        0x0000000008043cf8       0xb0 Core/lib/mbedtls/x509.o
+ .rodata        0x0000000008043da8      0x76c Core/lib/mbedtls/x509_crt.o
+ .rodata        0x0000000008044514      0x4c6 Core/lib/wifi_Src/es_wifi.o
  *(.rodata*)
- *fill*         0x0000000008044e9a        0x2 
+ *fill*         0x00000000080449da        0x2 
+ .rodata.certificate
+                0x00000000080449dc      0x77b Core/Src/main.o
+                0x00000000080449dc                certificate
+ *fill*         0x0000000008045157        0x1 
  .rodata.AHBPrescTable
-                0x0000000008044e9c       0x10 Core/Src/system_stm32l4xx.o
-                0x0000000008044e9c                AHBPrescTable
+                0x0000000008045158       0x10 Core/Src/system_stm32l4xx.o
+                0x0000000008045158                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008044eac        0x8 Core/Src/system_stm32l4xx.o
-                0x0000000008044eac                APBPrescTable
+                0x0000000008045168        0x8 Core/Src/system_stm32l4xx.o
+                0x0000000008045168                APBPrescTable
  .rodata.MSIRangeTable
-                0x0000000008044eb4       0x30 Core/Src/system_stm32l4xx.o
-                0x0000000008044eb4                MSIRangeTable
+                0x0000000008045170       0x30 Core/Src/system_stm32l4xx.o
+                0x0000000008045170                MSIRangeTable
  .rodata.base64_dec_map
-                0x0000000008044ee4       0x80 Core/lib/mbedtls/base64.o
+                0x00000000080451a0       0x80 Core/lib/mbedtls/base64.o
  .rodata.small_prime
-                0x0000000008044f64      0x2a0 Core/lib/mbedtls/bignum.o
- .rodata.P      0x0000000008045204       0x48 Core/lib/mbedtls/blowfish.o
- .rodata.S      0x000000000804524c     0x1000 Core/lib/mbedtls/blowfish.o
+                0x0000000008045220      0x2a0 Core/lib/mbedtls/bignum.o
+ .rodata.P      0x00000000080454c0       0x48 Core/lib/mbedtls/blowfish.o
+ .rodata.S      0x0000000008045508     0x1000 Core/lib/mbedtls/blowfish.o
  .rodata.SIGMA_CHARS
-                0x000000000804624c       0x30 Core/lib/mbedtls/camellia.o
- .rodata.FSb    0x000000000804627c      0x100 Core/lib/mbedtls/camellia.o
- .rodata.FSb2   0x000000000804637c      0x100 Core/lib/mbedtls/camellia.o
- .rodata.FSb3   0x000000000804647c      0x100 Core/lib/mbedtls/camellia.o
- .rodata.FSb4   0x000000000804657c      0x100 Core/lib/mbedtls/camellia.o
+                0x0000000008046508       0x30 Core/lib/mbedtls/camellia.o
+ .rodata.FSb    0x0000000008046538      0x100 Core/lib/mbedtls/camellia.o
+ .rodata.FSb2   0x0000000008046638      0x100 Core/lib/mbedtls/camellia.o
+ .rodata.FSb3   0x0000000008046738      0x100 Core/lib/mbedtls/camellia.o
+ .rodata.FSb4   0x0000000008046838      0x100 Core/lib/mbedtls/camellia.o
  .rodata.shifts
-                0x000000000804667c       0x20 Core/lib/mbedtls/camellia.o
+                0x0000000008046938       0x20 Core/lib/mbedtls/camellia.o
  .rodata.indexes
-                0x000000000804669c       0xa0 Core/lib/mbedtls/camellia.o
+                0x0000000008046958       0xa0 Core/lib/mbedtls/camellia.o
  .rodata.transposes
-                0x000000000804673c       0x28 Core/lib/mbedtls/camellia.o
+                0x00000000080469f8       0x28 Core/lib/mbedtls/camellia.o
  .rodata.aes_info
-                0x0000000008046764       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046a20       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_ecb_info
-                0x0000000008046794       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046a50       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_ecb_info
-                0x00000000080467b0       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046a6c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_ecb_info
-                0x00000000080467cc       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046a88       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_cbc_info
-                0x00000000080467e8       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046aa4       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_cbc_info
-                0x0000000008046804       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ac0       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_cbc_info
-                0x0000000008046820       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046adc       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_cfb128_info
-                0x000000000804683c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046af8       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_cfb128_info
-                0x0000000008046858       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046b14       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_cfb128_info
-                0x0000000008046874       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046b30       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_ofb_info
-                0x0000000008046890       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046b4c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_ofb_info
-                0x00000000080468ac       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046b68       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_ofb_info
-                0x00000000080468c8       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046b84       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_ctr_info
-                0x00000000080468e4       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ba0       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_ctr_info
-                0x0000000008046900       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046bbc       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_ctr_info
-                0x000000000804691c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046bd8       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.xts_aes_info
-                0x0000000008046938       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046bf4       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_xts_info
-                0x0000000008046968       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046c24       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_xts_info
-                0x0000000008046984       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046c40       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.gcm_aes_info
-                0x00000000080469a0       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046c5c       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_gcm_info
-                0x00000000080469d0       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046c8c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_gcm_info
-                0x00000000080469ec       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ca8       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_gcm_info
-                0x0000000008046a08       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046cc4       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.ccm_aes_info
-                0x0000000008046a24       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ce0       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_128_ccm_info
-                0x0000000008046a54       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046d10       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_192_ccm_info
-                0x0000000008046a70       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046d2c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.aes_256_ccm_info
-                0x0000000008046a8c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046d48       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_info
-                0x0000000008046aa8       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046d64       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_ecb_info
-                0x0000000008046ad8       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046d94       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_ecb_info
-                0x0000000008046af4       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046db0       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_ecb_info
-                0x0000000008046b10       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046dcc       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_cbc_info
-                0x0000000008046b2c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046de8       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_cbc_info
-                0x0000000008046b48       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e04       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_cbc_info
-                0x0000000008046b64       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e20       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_cfb128_info
-                0x0000000008046b80       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e3c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_cfb128_info
-                0x0000000008046b9c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e58       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_cfb128_info
-                0x0000000008046bb8       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e74       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_ctr_info
-                0x0000000008046bd4       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046e90       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_ctr_info
-                0x0000000008046bf0       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046eac       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_ctr_info
-                0x0000000008046c0c       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ec8       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.gcm_camellia_info
-                0x0000000008046c28       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046ee4       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_gcm_info
-                0x0000000008046c58       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046f14       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_gcm_info
-                0x0000000008046c74       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046f30       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_gcm_info
-                0x0000000008046c90       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046f4c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.ccm_camellia_info
-                0x0000000008046cac       0x30 Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046f68       0x30 Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_128_ccm_info
-                0x0000000008046cdc       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046f98       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_192_ccm_info
-                0x0000000008046cf8       0x1c Core/lib/mbedtls/cipher_wrap.o
+                0x0000000008046fb4       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.camellia_256_ccm_info
-                0x0000000008046d14       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_info
-                0x0000000008046d30       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ecb_info
-                0x0000000008046d60       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_cbc_info
-                0x0000000008046d7c       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede_info
-                0x0000000008046d98       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede_ecb_info
-                0x0000000008046dc8       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede_cbc_info
-                0x0000000008046de4       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede3_info
-                0x0000000008046e00       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede3_ecb_info
-                0x0000000008046e30       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.des_ede3_cbc_info
-                0x0000000008046e4c       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.blowfish_info
-                0x0000000008046e68       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.blowfish_ecb_info
-                0x0000000008046e98       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.blowfish_cbc_info
-                0x0000000008046eb4       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.blowfish_cfb64_info
-                0x0000000008046ed0       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.blowfish_ctr_info
-                0x0000000008046eec       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.arc4_base_info
-                0x0000000008046f08       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.arc4_128_info
-                0x0000000008046f38       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.chacha20_base_info
-                0x0000000008046f54       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.chacha20_info
-                0x0000000008046f84       0x1c Core/lib/mbedtls/cipher_wrap.o
- .rodata.chachapoly_base_info
-                0x0000000008046fa0       0x30 Core/lib/mbedtls/cipher_wrap.o
- .rodata.chachapoly_info
                 0x0000000008046fd0       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_info
+                0x0000000008046fec       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ecb_info
+                0x000000000804701c       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_cbc_info
+                0x0000000008047038       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede_info
+                0x0000000008047054       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede_ecb_info
+                0x0000000008047084       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede_cbc_info
+                0x00000000080470a0       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede3_info
+                0x00000000080470bc       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede3_ecb_info
+                0x00000000080470ec       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.des_ede3_cbc_info
+                0x0000000008047108       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.blowfish_info
+                0x0000000008047124       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.blowfish_ecb_info
+                0x0000000008047154       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.blowfish_cbc_info
+                0x0000000008047170       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.blowfish_cfb64_info
+                0x000000000804718c       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.blowfish_ctr_info
+                0x00000000080471a8       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.arc4_base_info
+                0x00000000080471c4       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.arc4_128_info
+                0x00000000080471f4       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.chacha20_base_info
+                0x0000000008047210       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.chacha20_info
+                0x0000000008047240       0x1c Core/lib/mbedtls/cipher_wrap.o
+ .rodata.chachapoly_base_info
+                0x000000000804725c       0x30 Core/lib/mbedtls/cipher_wrap.o
+ .rodata.chachapoly_info
+                0x000000000804728c       0x1c Core/lib/mbedtls/cipher_wrap.o
  .rodata.mbedtls_cipher_definitions
-                0x0000000008046fec      0x1b8 Core/lib/mbedtls/cipher_wrap.o
-                0x0000000008046fec                mbedtls_cipher_definitions
- .rodata.SB1    0x00000000080471a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB2    0x00000000080472a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB3    0x00000000080473a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB4    0x00000000080474a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB5    0x00000000080475a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB6    0x00000000080476a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB7    0x00000000080477a4      0x100 Core/lib/mbedtls/des.o
- .rodata.SB8    0x00000000080478a4      0x100 Core/lib/mbedtls/des.o
- .rodata.LHs    0x00000000080479a4       0x40 Core/lib/mbedtls/des.o
- .rodata.RHs    0x00000000080479e4       0x40 Core/lib/mbedtls/des.o
+                0x00000000080472a8      0x1b8 Core/lib/mbedtls/cipher_wrap.o
+                0x00000000080472a8                mbedtls_cipher_definitions
+ .rodata.SB1    0x0000000008047460      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB2    0x0000000008047560      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB3    0x0000000008047660      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB4    0x0000000008047760      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB5    0x0000000008047860      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB6    0x0000000008047960      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB7    0x0000000008047a60      0x100 Core/lib/mbedtls/des.o
+ .rodata.SB8    0x0000000008047b60      0x100 Core/lib/mbedtls/des.o
+ .rodata.LHs    0x0000000008047c60       0x40 Core/lib/mbedtls/des.o
+ .rodata.RHs    0x0000000008047ca0       0x40 Core/lib/mbedtls/des.o
  .rodata.ecp_supported_curves
-                0x0000000008047a24       0x90 Core/lib/mbedtls/ecp.o
+                0x0000000008047ce0       0x90 Core/lib/mbedtls/ecp.o
  .rodata.secp192r1_p
-                0x0000000008047ab4       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047d70       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192r1_b
-                0x0000000008047acc       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047d88       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192r1_gx
-                0x0000000008047ae4       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047da0       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192r1_gy
-                0x0000000008047afc       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047db8       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192r1_n
-                0x0000000008047b14       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047dd0       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224r1_p
-                0x0000000008047b2c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047de8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224r1_b
-                0x0000000008047b4c       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e08       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224r1_gx
-                0x0000000008047b68       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e24       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224r1_gy
-                0x0000000008047b84       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e40       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224r1_n
-                0x0000000008047ba0       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e5c       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256r1_p
-                0x0000000008047bbc       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e78       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256r1_b
-                0x0000000008047bdc       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047e98       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256r1_gx
-                0x0000000008047bfc       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047eb8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256r1_gy
-                0x0000000008047c1c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047ed8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256r1_n
-                0x0000000008047c3c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047ef8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp384r1_p
-                0x0000000008047c5c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047f18       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp384r1_b
-                0x0000000008047c8c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047f48       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp384r1_gx
-                0x0000000008047cbc       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047f78       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp384r1_gy
-                0x0000000008047cec       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047fa8       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp384r1_n
-                0x0000000008047d1c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008047fd8       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp521r1_p
-                0x0000000008047d4c       0x44 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048008       0x44 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp521r1_b
-                0x0000000008047d90       0x44 Core/lib/mbedtls/ecp_curves.o
+                0x000000000804804c       0x44 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp521r1_gx
-                0x0000000008047dd4       0x44 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048090       0x44 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp521r1_gy
-                0x0000000008047e18       0x44 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080480d4       0x44 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp521r1_n
-                0x0000000008047e5c       0x44 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048118       0x44 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_p
-                0x0000000008047ea0       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x000000000804815c       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_a
-                0x0000000008047eb8        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048174        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_b
-                0x0000000008047ebc        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048178        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_gx
-                0x0000000008047ec0       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x000000000804817c       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_gy
-                0x0000000008047ed8       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048194       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp192k1_n
-                0x0000000008047ef0       0x18 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080481ac       0x18 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_p
-                0x0000000008047f08       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x00000000080481c4       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_a
-                0x0000000008047f24        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080481e0        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_b
-                0x0000000008047f28        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080481e4        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_gx
-                0x0000000008047f2c       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x00000000080481e8       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_gy
-                0x0000000008047f48       0x1c Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048204       0x1c Core/lib/mbedtls/ecp_curves.o
  .rodata.secp224k1_n
-                0x0000000008047f64       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048220       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_p
-                0x0000000008047f84       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048240       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_a
-                0x0000000008047fa4        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048260        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_b
-                0x0000000008047fa8        0x4 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048264        0x4 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_gx
-                0x0000000008047fac       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048268       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_gy
-                0x0000000008047fcc       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048288       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.secp256k1_n
-                0x0000000008047fec       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080482a8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_p
-                0x000000000804800c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080482c8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_a
-                0x000000000804802c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080482e8       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_b
-                0x000000000804804c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048308       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_gx
-                0x000000000804806c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048328       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_gy
-                0x000000000804808c       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048348       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP256r1_n
-                0x00000000080480ac       0x20 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048368       0x20 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_p
-                0x00000000080480cc       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048388       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_a
-                0x00000000080480fc       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080483b8       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_b
-                0x000000000804812c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080483e8       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_gx
-                0x000000000804815c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048418       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_gy
-                0x000000000804818c       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048448       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP384r1_n
-                0x00000000080481bc       0x30 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048478       0x30 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_p
-                0x00000000080481ec       0x40 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080484a8       0x40 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_a
-                0x000000000804822c       0x40 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080484e8       0x40 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_b
-                0x000000000804826c       0x40 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048528       0x40 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_gx
-                0x00000000080482ac       0x40 Core/lib/mbedtls/ecp_curves.o
+                0x0000000008048568       0x40 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_gy
-                0x00000000080482ec       0x40 Core/lib/mbedtls/ecp_curves.o
+                0x00000000080485a8       0x40 Core/lib/mbedtls/ecp_curves.o
  .rodata.brainpoolP512r1_n
-                0x000000000804832c       0x40 Core/lib/mbedtls/ecp_curves.o
- *fill*         0x000000000804836c        0x4 
- .rodata.last4  0x0000000008048370       0x80 Core/lib/mbedtls/gcm.o
+                0x00000000080485e8       0x40 Core/lib/mbedtls/ecp_curves.o
+ .rodata.last4  0x0000000008048628       0x80 Core/lib/mbedtls/gcm.o
  .rodata.mbedtls_md5_info
-                0x00000000080483f0       0x30 Core/lib/mbedtls/md_wrap.o
-                0x00000000080483f0                mbedtls_md5_info
+                0x00000000080486a8       0x30 Core/lib/mbedtls/md_wrap.o
+                0x00000000080486a8                mbedtls_md5_info
  .rodata.mbedtls_ripemd160_info
-                0x0000000008048420       0x30 Core/lib/mbedtls/md_wrap.o
-                0x0000000008048420                mbedtls_ripemd160_info
+                0x00000000080486d8       0x30 Core/lib/mbedtls/md_wrap.o
+                0x00000000080486d8                mbedtls_ripemd160_info
  .rodata.mbedtls_sha1_info
-                0x0000000008048450       0x30 Core/lib/mbedtls/md_wrap.o
-                0x0000000008048450                mbedtls_sha1_info
+                0x0000000008048708       0x30 Core/lib/mbedtls/md_wrap.o
+                0x0000000008048708                mbedtls_sha1_info
  .rodata.mbedtls_sha224_info
-                0x0000000008048480       0x30 Core/lib/mbedtls/md_wrap.o
-                0x0000000008048480                mbedtls_sha224_info
+                0x0000000008048738       0x30 Core/lib/mbedtls/md_wrap.o
+                0x0000000008048738                mbedtls_sha224_info
  .rodata.mbedtls_sha256_info
-                0x00000000080484b0       0x30 Core/lib/mbedtls/md_wrap.o
-                0x00000000080484b0                mbedtls_sha256_info
+                0x0000000008048768       0x30 Core/lib/mbedtls/md_wrap.o
+                0x0000000008048768                mbedtls_sha256_info
  .rodata.mbedtls_sha384_info
-                0x00000000080484e0       0x30 Core/lib/mbedtls/md_wrap.o
-                0x00000000080484e0                mbedtls_sha384_info
+                0x0000000008048798       0x30 Core/lib/mbedtls/md_wrap.o
+                0x0000000008048798                mbedtls_sha384_info
  .rodata.mbedtls_sha512_info
-                0x0000000008048510       0x30 Core/lib/mbedtls/md_wrap.o
-                0x0000000008048510                mbedtls_sha512_info
+                0x00000000080487c8       0x30 Core/lib/mbedtls/md_wrap.o
+                0x00000000080487c8                mbedtls_sha512_info
  .rodata.oid_x520_attr_type
-                0x0000000008048540      0x190 Core/lib/mbedtls/oid.o
+                0x00000000080487f8      0x190 Core/lib/mbedtls/oid.o
  .rodata.oid_x509_ext
-                0x00000000080486d0       0x78 Core/lib/mbedtls/oid.o
+                0x0000000008048988       0x78 Core/lib/mbedtls/oid.o
  .rodata.oid_ext_key_usage
-                0x0000000008048748       0x70 Core/lib/mbedtls/oid.o
+                0x0000000008048a00       0x70 Core/lib/mbedtls/oid.o
  .rodata.oid_sig_alg
-                0x00000000080487b8      0x118 Core/lib/mbedtls/oid.o
+                0x0000000008048a70      0x118 Core/lib/mbedtls/oid.o
  .rodata.oid_pk_alg
-                0x00000000080488d0       0x50 Core/lib/mbedtls/oid.o
+                0x0000000008048b88       0x50 Core/lib/mbedtls/oid.o
  .rodata.oid_ecp_grp
-                0x0000000008048920       0xf0 Core/lib/mbedtls/oid.o
+                0x0000000008048bd8       0xf0 Core/lib/mbedtls/oid.o
  .rodata.oid_md_alg
-                0x0000000008048a10       0x8c Core/lib/mbedtls/oid.o
+                0x0000000008048cc8       0x8c Core/lib/mbedtls/oid.o
  .rodata.mbedtls_rsa_info
-                0x0000000008048a9c       0x30 Core/lib/mbedtls/pk_wrap.o
-                0x0000000008048a9c                mbedtls_rsa_info
+                0x0000000008048d54       0x30 Core/lib/mbedtls/pk_wrap.o
+                0x0000000008048d54                mbedtls_rsa_info
  .rodata.mbedtls_eckey_info
-                0x0000000008048acc       0x30 Core/lib/mbedtls/pk_wrap.o
-                0x0000000008048acc                mbedtls_eckey_info
+                0x0000000008048d84       0x30 Core/lib/mbedtls/pk_wrap.o
+                0x0000000008048d84                mbedtls_eckey_info
  .rodata.mbedtls_eckeydh_info
-                0x0000000008048afc       0x30 Core/lib/mbedtls/pk_wrap.o
-                0x0000000008048afc                mbedtls_eckeydh_info
+                0x0000000008048db4       0x30 Core/lib/mbedtls/pk_wrap.o
+                0x0000000008048db4                mbedtls_eckeydh_info
  .rodata.mbedtls_ecdsa_info
-                0x0000000008048b2c       0x30 Core/lib/mbedtls/pk_wrap.o
-                0x0000000008048b2c                mbedtls_ecdsa_info
+                0x0000000008048de4       0x30 Core/lib/mbedtls/pk_wrap.o
+                0x0000000008048de4                mbedtls_ecdsa_info
  .rodata.ripemd160_padding
-                0x0000000008048b5c       0x40 Core/lib/mbedtls/ripemd160.o
- .rodata.K      0x0000000008048b9c      0x100 Core/lib/mbedtls/sha256.o
- *fill*         0x0000000008048c9c        0x4 
- .rodata.K      0x0000000008048ca0      0x280 Core/lib/mbedtls/sha512.o
+                0x0000000008048e14       0x40 Core/lib/mbedtls/ripemd160.o
+ .rodata.K      0x0000000008048e54      0x100 Core/lib/mbedtls/sha256.o
+ *fill*         0x0000000008048f54        0x4 
+ .rodata.K      0x0000000008048f58      0x280 Core/lib/mbedtls/sha512.o
  .rodata.ciphersuite_preference
-                0x0000000008048f20      0x340 Core/lib/mbedtls/ssl_ciphersuites.o
+                0x00000000080491d8      0x340 Core/lib/mbedtls/ssl_ciphersuites.o
  .rodata.ciphersuite_definitions
-                0x0000000008049260     0x1280 Core/lib/mbedtls/ssl_ciphersuites.o
+                0x0000000008049518     0x1280 Core/lib/mbedtls/ssl_ciphersuites.o
  .rodata.mbedtls_x509_crt_profile_default
-                0x000000000804a4e0       0x10 Core/lib/mbedtls/x509_crt.o
-                0x000000000804a4e0                mbedtls_x509_crt_profile_default
+                0x000000000804a798       0x10 Core/lib/mbedtls/x509_crt.o
+                0x000000000804a798                mbedtls_x509_crt_profile_default
  .rodata.mbedtls_x509_crt_profile_suiteb
-                0x000000000804a4f0       0x10 Core/lib/mbedtls/x509_crt.o
-                0x000000000804a4f0                mbedtls_x509_crt_profile_suiteb
+                0x000000000804a7a8       0x10 Core/lib/mbedtls/x509_crt.o
+                0x000000000804a7a8                mbedtls_x509_crt_profile_suiteb
  .rodata.x509_crt_verify_strings
-                0x000000000804a500       0xa8 Core/lib/mbedtls/x509_crt.o
+                0x000000000804a7b8       0xa8 Core/lib/mbedtls/x509_crt.o
  .rodata.__sf_fake_stderr
-                0x000000000804a5a8       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
-                0x000000000804a5a8                __sf_fake_stderr
+                0x000000000804a860       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
+                0x000000000804a860                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x000000000804a5c8       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
-                0x000000000804a5c8                __sf_fake_stdin
+                0x000000000804a880       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
+                0x000000000804a880                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000000000804a5e8       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
-                0x000000000804a5e8                __sf_fake_stdout
+                0x000000000804a8a0       0x20 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-findfp.o)
+                0x000000000804a8a0                __sf_fake_stdout
  .rodata._global_impure_ptr
-                0x000000000804a608        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-                0x000000000804a608                _global_impure_ptr
+                0x000000000804a8c0        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                0x000000000804a8c0                _global_impure_ptr
  .rodata._vfprintf_r.str1.1
-                0x000000000804a60c       0x11 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000804a8c4       0x11 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x000000000804a61d       0x22 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000804a8d5       0x22 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata._svfprintf_r.str1.1
-                0x000000000804a63f       0x11 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
-                0x000000000804a650                . = ALIGN (0x4)
- *fill*         0x000000000804a63f        0x1 
+                0x000000000804a8f7       0x11 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x000000000804a908                . = ALIGN (0x4)
+ *fill*         0x000000000804a8f7        0x1 
 
-.ARM.extab      0x000000000804a640        0x0
-                0x000000000804a640                . = ALIGN (0x4)
+.ARM.extab      0x000000000804a8f8        0x0
+                0x000000000804a8f8                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000804a640                . = ALIGN (0x4)
+                0x000000000804a8f8                . = ALIGN (0x4)
 
-.ARM            0x000000000804a640        0x8
-                0x000000000804a640                . = ALIGN (0x4)
-                0x000000000804a640                __exidx_start = .
+.ARM            0x000000000804a8f8        0x8
+                0x000000000804a8f8                . = ALIGN (0x4)
+                0x000000000804a8f8                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x000000000804a640        0x8 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
-                0x000000000804a648                __exidx_end = .
-                0x000000000804a648                . = ALIGN (0x4)
+ .ARM.exidx     0x000000000804a8f8        0x8 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+                0x000000000804a900                __exidx_end = .
+                0x000000000804a900                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000804a648        0x0
- .rel.iplt      0x000000000804a648        0x0 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x000000000804a900        0x0
+ .rel.iplt      0x000000000804a900        0x0 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.preinit_array  0x000000000804a648        0x0
-                0x000000000804a648                . = ALIGN (0x4)
-                0x000000000804a648                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000000804a900        0x0
+                0x000000000804a900                . = ALIGN (0x4)
+                0x000000000804a900                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000804a648                PROVIDE (__preinit_array_end = .)
-                0x000000000804a648                . = ALIGN (0x4)
+                0x000000000804a900                PROVIDE (__preinit_array_end = .)
+                0x000000000804a900                . = ALIGN (0x4)
 
-.init_array     0x000000000804a648        0x4
-                0x000000000804a648                . = ALIGN (0x4)
-                0x000000000804a648                PROVIDE (__init_array_start = .)
+.init_array     0x000000000804a900        0x4
+                0x000000000804a900                . = ALIGN (0x4)
+                0x000000000804a900                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000804a648        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x000000000804a64c                PROVIDE (__init_array_end = .)
-                0x000000000804a64c                . = ALIGN (0x4)
+ .init_array    0x000000000804a900        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x000000000804a904                PROVIDE (__init_array_end = .)
+                0x000000000804a904                . = ALIGN (0x4)
 
-.fini_array     0x000000000804a64c        0x4
-                0x000000000804a64c                . = ALIGN (0x4)
+.fini_array     0x000000000804a904        0x4
+                0x000000000804a904                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000804a64c        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x000000000804a904        0x4 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x000000000804a650                . = ALIGN (0x4)
-                0x000000000804a650                _sidata = LOADADDR (.data)
+                0x000000000804a908                . = ALIGN (0x4)
+                0x000000000804a908                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0xd0 load address 0x000000000804a650
+.data           0x0000000020000000       0xd0 load address 0x000000000804a908
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -22702,11 +22705,11 @@ LOAD /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
                 0x00000000200000d0                . = ALIGN (0x4)
                 0x00000000200000d0                _edata = .
 
-.igot.plt       0x00000000200000d0        0x0 load address 0x000000000804a720
+.igot.plt       0x00000000200000d0        0x0 load address 0x000000000804a9d8
  .igot.plt      0x00000000200000d0        0x0 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 0x00000000200000d0                . = ALIGN (0x4)
 
-.bss            0x00000000200000d0     0x3bd8 load address 0x000000000804a720
+.bss            0x00000000200000d0     0x3bd8 load address 0x000000000804a9d8
                 0x00000000200000d0                _sbss = .
                 0x00000000200000d0                __bss_start__ = _sbss
  *(.bss)
@@ -22803,7 +22806,7 @@ LOAD /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
                 0x0000000020003ca8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020003ca8      0x600 load address 0x000000000804a720
+                0x0000000020003ca8      0x600 load address 0x000000000804a9d8
                 0x0000000020003ca8                . = ALIGN (0x8)
                 0x0000000020003ca8                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -23095,93 +23098,93 @@ LOAD /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.g
                 0x0000000000001c9f       0x22 /opt/st/stm32cubeide_1.2.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(prova2.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x75c83
+.debug_info     0x0000000000000000    0x75caa
  .debug_info    0x0000000000000000     0x1821 Core/Src/dfsdm.o
  .debug_info    0x0000000000001821     0x180e Core/Src/gpio.o
  .debug_info    0x000000000000302f     0x1ab8 Core/Src/i2c.o
- .debug_info    0x0000000000004ae7     0x3e55 Core/Src/main.o
- .debug_info    0x000000000000893c     0x1a28 Core/Src/quadspi.o
- .debug_info    0x000000000000a364     0x1589 Core/Src/rng.o
- .debug_info    0x000000000000b8ed     0x1a69 Core/Src/spi.o
- .debug_info    0x000000000000d356     0x144e Core/Src/stm32l4xx_hal_msp.o
- .debug_info    0x000000000000e7a4     0x12e7 Core/Src/stm32l4xx_it.o
- .debug_info    0x000000000000fa8b     0x1329 Core/Src/syscalls.o
- .debug_info    0x0000000000010db4      0x91c Core/Src/sysmem.o
- .debug_info    0x00000000000116d0      0x6f6 Core/Src/system_stm32l4xx.o
- .debug_info    0x0000000000011dc6     0x1b5f Core/Src/usart.o
- .debug_info    0x0000000000013925     0x1adc Core/Src/usb_otg.o
- .debug_info    0x0000000000015401       0x22 Core/Startup/startup_stm32l475vgtx.o
- .debug_info    0x0000000000015423     0x198d Core/lib/mbedtls/aes.o
- .debug_info    0x0000000000016db0      0xb59 Core/lib/mbedtls/arc4.o
- .debug_info    0x0000000000017909      0xe9f Core/lib/mbedtls/asn1parse.o
- .debug_info    0x00000000000187a8     0x106d Core/lib/mbedtls/asn1write.o
- .debug_info    0x0000000000019815      0xb21 Core/lib/mbedtls/base64.o
- .debug_info    0x000000000001a336     0x2673 Core/lib/mbedtls/bignum.o
- .debug_info    0x000000000001c9a9      0xde9 Core/lib/mbedtls/blowfish.o
- .debug_info    0x000000000001d792     0x120d Core/lib/mbedtls/camellia.o
- .debug_info    0x000000000001e99f     0x1423 Core/lib/mbedtls/ccm.o
- .debug_info    0x000000000001fdc2      0xd81 Core/lib/mbedtls/chacha20.o
- .debug_info    0x0000000000020b43     0x10e3 Core/lib/mbedtls/chachapoly.o
- .debug_info    0x0000000000021c26     0x1dc8 Core/lib/mbedtls/cipher.o
- .debug_info    0x00000000000239ee     0x2aa1 Core/lib/mbedtls/cipher_wrap.o
- .debug_info    0x000000000002648f     0x1161 Core/lib/mbedtls/ctr_drbg.o
- .debug_info    0x00000000000275f0     0x20b6 Core/lib/mbedtls/debug.o
- .debug_info    0x00000000000296a6     0x1299 Core/lib/mbedtls/des.o
- .debug_info    0x000000000002a93f     0x1004 Core/lib/mbedtls/dhm.o
- .debug_info    0x000000000002b943     0x1497 Core/lib/mbedtls/ecdh.o
- .debug_info    0x000000000002cdda     0x17e6 Core/lib/mbedtls/ecdsa.o
- .debug_info    0x000000000002e5c0     0x2747 Core/lib/mbedtls/ecp.o
- .debug_info    0x0000000000030d07     0x18ee Core/lib/mbedtls/ecp_curves.o
- .debug_info    0x00000000000325f5      0xe86 Core/lib/mbedtls/entropy.o
- .debug_info    0x000000000003347b     0x1677 Core/lib/mbedtls/gcm.o
- .debug_info    0x0000000000034af2     0x1056 Core/lib/mbedtls/hmac_drbg.o
- .debug_info    0x0000000000035b48     0x10c7 Core/lib/mbedtls/md.o
- .debug_info    0x0000000000036c0f      0xdfb Core/lib/mbedtls/md5.o
- .debug_info    0x0000000000037a0a     0x15a5 Core/lib/mbedtls/md_wrap.o
- .debug_info    0x0000000000038faf      0xc3f Core/lib/mbedtls/net_sockets.o
- .debug_info    0x0000000000039bee     0x17fe Core/lib/mbedtls/oid.o
- .debug_info    0x000000000003b3ec     0x1187 Core/lib/mbedtls/pem.o
- .debug_info    0x000000000003c573      0xd79 Core/lib/mbedtls/pk.o
- .debug_info    0x000000000003d2ec     0x1a66 Core/lib/mbedtls/pk_wrap.o
- .debug_info    0x000000000003ed52     0x184b Core/lib/mbedtls/pkparse.o
- .debug_info    0x000000000004059d      0x917 Core/lib/mbedtls/platform_util.o
- .debug_info    0x0000000000040eb4      0xef2 Core/lib/mbedtls/poly1305.o
- .debug_info    0x0000000000041da6      0xea0 Core/lib/mbedtls/ripemd160.o
- .debug_info    0x0000000000042c46     0x24bb Core/lib/mbedtls/rsa.o
- .debug_info    0x0000000000045101      0x473 Core/lib/mbedtls/rsa_internal.o
- .debug_info    0x0000000000045574      0xe73 Core/lib/mbedtls/sha1.o
- .debug_info    0x00000000000463e7      0xec8 Core/lib/mbedtls/sha256.o
- .debug_info    0x00000000000472af      0xf23 Core/lib/mbedtls/sha512.o
- .debug_info    0x00000000000481d2      0xf5b Core/lib/mbedtls/ssl_ciphersuites.o
- .debug_info    0x000000000004912d     0x3598 Core/lib/mbedtls/ssl_cli.o
- .debug_info    0x000000000004c6c5     0x5654 Core/lib/mbedtls/ssl_tls.o
- .debug_info    0x0000000000051d19     0x1d88 Core/lib/mbedtls/x509.o
- .debug_info    0x0000000000053aa1     0x280d Core/lib/mbedtls/x509_crt.o
- .debug_info    0x00000000000562ae     0x12a6 Core/lib/mbedtls_entropy.o
- .debug_info    0x0000000000057554     0x1dcd Core/lib/net_conf.o
- .debug_info    0x0000000000059321     0x31ec Core/lib/net_mbedtls.o
- .debug_info    0x000000000005c50d     0x24d8 Core/lib/wifi_Src/es_wifi.o
- .debug_info    0x000000000005e9e5     0x1919 Core/lib/wifi_Src/es_wifi_io.o
- .debug_info    0x00000000000602fe     0x1a33 Core/lib/wifi_Src/stm32l475e_iot01.o
- .debug_info    0x0000000000061d31     0x1a9c Core/lib/wifi_Src/wifi.o
- .debug_info    0x00000000000637cd      0xbda Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
- .debug_info    0x00000000000643a7      0xf36 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
- .debug_info    0x00000000000652dd     0x1b74 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
- .debug_info    0x0000000000066e51      0x8c1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
- .debug_info    0x0000000000067712      0x982 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
- .debug_info    0x0000000000068094     0x20dc Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
- .debug_info    0x000000000006a170      0xb41 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
- .debug_info    0x000000000006acb1     0x1281 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
- .debug_info    0x000000000006bf32      0x9d5 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
- .debug_info    0x000000000006c907      0xa60 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
- .debug_info    0x000000000006d367      0xb04 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
- .debug_info    0x000000000006de6b     0x129a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
- .debug_info    0x000000000006f105      0xcfe Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
- .debug_info    0x000000000006fe03      0xf10 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
- .debug_info    0x0000000000070d13      0x64b Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
- .debug_info    0x000000000007135e     0x1702 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
- .debug_info    0x0000000000072a60     0x180e Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
- .debug_info    0x000000000007426e     0x1a15 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
+ .debug_info    0x0000000000004ae7     0x3e7c Core/Src/main.o
+ .debug_info    0x0000000000008963     0x1a28 Core/Src/quadspi.o
+ .debug_info    0x000000000000a38b     0x1589 Core/Src/rng.o
+ .debug_info    0x000000000000b914     0x1a69 Core/Src/spi.o
+ .debug_info    0x000000000000d37d     0x144e Core/Src/stm32l4xx_hal_msp.o
+ .debug_info    0x000000000000e7cb     0x12e7 Core/Src/stm32l4xx_it.o
+ .debug_info    0x000000000000fab2     0x1329 Core/Src/syscalls.o
+ .debug_info    0x0000000000010ddb      0x91c Core/Src/sysmem.o
+ .debug_info    0x00000000000116f7      0x6f6 Core/Src/system_stm32l4xx.o
+ .debug_info    0x0000000000011ded     0x1b5f Core/Src/usart.o
+ .debug_info    0x000000000001394c     0x1adc Core/Src/usb_otg.o
+ .debug_info    0x0000000000015428       0x22 Core/Startup/startup_stm32l475vgtx.o
+ .debug_info    0x000000000001544a     0x198d Core/lib/mbedtls/aes.o
+ .debug_info    0x0000000000016dd7      0xb59 Core/lib/mbedtls/arc4.o
+ .debug_info    0x0000000000017930      0xe9f Core/lib/mbedtls/asn1parse.o
+ .debug_info    0x00000000000187cf     0x106d Core/lib/mbedtls/asn1write.o
+ .debug_info    0x000000000001983c      0xb21 Core/lib/mbedtls/base64.o
+ .debug_info    0x000000000001a35d     0x2673 Core/lib/mbedtls/bignum.o
+ .debug_info    0x000000000001c9d0      0xde9 Core/lib/mbedtls/blowfish.o
+ .debug_info    0x000000000001d7b9     0x120d Core/lib/mbedtls/camellia.o
+ .debug_info    0x000000000001e9c6     0x1423 Core/lib/mbedtls/ccm.o
+ .debug_info    0x000000000001fde9      0xd81 Core/lib/mbedtls/chacha20.o
+ .debug_info    0x0000000000020b6a     0x10e3 Core/lib/mbedtls/chachapoly.o
+ .debug_info    0x0000000000021c4d     0x1dc8 Core/lib/mbedtls/cipher.o
+ .debug_info    0x0000000000023a15     0x2aa1 Core/lib/mbedtls/cipher_wrap.o
+ .debug_info    0x00000000000264b6     0x1161 Core/lib/mbedtls/ctr_drbg.o
+ .debug_info    0x0000000000027617     0x20b6 Core/lib/mbedtls/debug.o
+ .debug_info    0x00000000000296cd     0x1299 Core/lib/mbedtls/des.o
+ .debug_info    0x000000000002a966     0x1004 Core/lib/mbedtls/dhm.o
+ .debug_info    0x000000000002b96a     0x1497 Core/lib/mbedtls/ecdh.o
+ .debug_info    0x000000000002ce01     0x17e6 Core/lib/mbedtls/ecdsa.o
+ .debug_info    0x000000000002e5e7     0x2747 Core/lib/mbedtls/ecp.o
+ .debug_info    0x0000000000030d2e     0x18ee Core/lib/mbedtls/ecp_curves.o
+ .debug_info    0x000000000003261c      0xe86 Core/lib/mbedtls/entropy.o
+ .debug_info    0x00000000000334a2     0x1677 Core/lib/mbedtls/gcm.o
+ .debug_info    0x0000000000034b19     0x1056 Core/lib/mbedtls/hmac_drbg.o
+ .debug_info    0x0000000000035b6f     0x10c7 Core/lib/mbedtls/md.o
+ .debug_info    0x0000000000036c36      0xdfb Core/lib/mbedtls/md5.o
+ .debug_info    0x0000000000037a31     0x15a5 Core/lib/mbedtls/md_wrap.o
+ .debug_info    0x0000000000038fd6      0xc3f Core/lib/mbedtls/net_sockets.o
+ .debug_info    0x0000000000039c15     0x17fe Core/lib/mbedtls/oid.o
+ .debug_info    0x000000000003b413     0x1187 Core/lib/mbedtls/pem.o
+ .debug_info    0x000000000003c59a      0xd79 Core/lib/mbedtls/pk.o
+ .debug_info    0x000000000003d313     0x1a66 Core/lib/mbedtls/pk_wrap.o
+ .debug_info    0x000000000003ed79     0x184b Core/lib/mbedtls/pkparse.o
+ .debug_info    0x00000000000405c4      0x917 Core/lib/mbedtls/platform_util.o
+ .debug_info    0x0000000000040edb      0xef2 Core/lib/mbedtls/poly1305.o
+ .debug_info    0x0000000000041dcd      0xea0 Core/lib/mbedtls/ripemd160.o
+ .debug_info    0x0000000000042c6d     0x24bb Core/lib/mbedtls/rsa.o
+ .debug_info    0x0000000000045128      0x473 Core/lib/mbedtls/rsa_internal.o
+ .debug_info    0x000000000004559b      0xe73 Core/lib/mbedtls/sha1.o
+ .debug_info    0x000000000004640e      0xec8 Core/lib/mbedtls/sha256.o
+ .debug_info    0x00000000000472d6      0xf23 Core/lib/mbedtls/sha512.o
+ .debug_info    0x00000000000481f9      0xf5b Core/lib/mbedtls/ssl_ciphersuites.o
+ .debug_info    0x0000000000049154     0x3598 Core/lib/mbedtls/ssl_cli.o
+ .debug_info    0x000000000004c6ec     0x5654 Core/lib/mbedtls/ssl_tls.o
+ .debug_info    0x0000000000051d40     0x1d88 Core/lib/mbedtls/x509.o
+ .debug_info    0x0000000000053ac8     0x280d Core/lib/mbedtls/x509_crt.o
+ .debug_info    0x00000000000562d5     0x12a6 Core/lib/mbedtls_entropy.o
+ .debug_info    0x000000000005757b     0x1dcd Core/lib/net_conf.o
+ .debug_info    0x0000000000059348     0x31ec Core/lib/net_mbedtls.o
+ .debug_info    0x000000000005c534     0x24d8 Core/lib/wifi_Src/es_wifi.o
+ .debug_info    0x000000000005ea0c     0x1919 Core/lib/wifi_Src/es_wifi_io.o
+ .debug_info    0x0000000000060325     0x1a33 Core/lib/wifi_Src/stm32l475e_iot01.o
+ .debug_info    0x0000000000061d58     0x1a9c Core/lib/wifi_Src/wifi.o
+ .debug_info    0x00000000000637f4      0xbda Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_info    0x00000000000643ce      0xf36 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_info    0x0000000000065304     0x1b74 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
+ .debug_info    0x0000000000066e78      0x8c1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_info    0x0000000000067739      0x982 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_info    0x00000000000680bb     0x20dc Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
+ .debug_info    0x000000000006a197      0xb41 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
+ .debug_info    0x000000000006acd8     0x1281 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
+ .debug_info    0x000000000006bf59      0x9d5 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
+ .debug_info    0x000000000006c92e      0xa60 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
+ .debug_info    0x000000000006d38e      0xb04 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_info    0x000000000006de92     0x129a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
+ .debug_info    0x000000000006f12c      0xcfe Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_info    0x000000000006fe2a      0xf10 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
+ .debug_info    0x0000000000070d3a      0x64b Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
+ .debug_info    0x0000000000071385     0x1702 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
+ .debug_info    0x0000000000072a87     0x180e Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
+ .debug_info    0x0000000000074295     0x1a15 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
 .debug_abbrev   0x0000000000000000     0xc889
  .debug_abbrev  0x0000000000000000      0x205 Core/Src/dfsdm.o
@@ -23533,7 +23536,7 @@ OUTPUT(prova2.elf elf32-littlearm)
  .debug_ranges  0x0000000000003af0      0x200 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
  .debug_ranges  0x0000000000003cf0      0x188 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
-.debug_macro    0x0000000000000000    0x3b88b
+.debug_macro    0x0000000000000000    0x3b885
  .debug_macro   0x0000000000000000      0x769 Core/Src/dfsdm.o
  .debug_macro   0x0000000000000769      0xa5a Core/Src/dfsdm.o
  .debug_macro   0x00000000000011c3       0xd8 Core/Src/dfsdm.o
@@ -23657,139 +23660,139 @@ OUTPUT(prova2.elf elf32-littlearm)
  .debug_macro   0x000000000002722f      0x45a Core/Src/dfsdm.o
  .debug_macro   0x0000000000027689      0x769 Core/Src/gpio.o
  .debug_macro   0x0000000000027df2      0x769 Core/Src/i2c.o
- .debug_macro   0x000000000002855b      0x7fb Core/Src/main.o
- .debug_macro   0x0000000000028d56      0x769 Core/Src/quadspi.o
- .debug_macro   0x00000000000294bf      0x769 Core/Src/rng.o
- .debug_macro   0x0000000000029c28      0x769 Core/Src/spi.o
- .debug_macro   0x000000000002a391      0x75d Core/Src/stm32l4xx_hal_msp.o
- .debug_macro   0x000000000002aaee      0x768 Core/Src/stm32l4xx_it.o
- .debug_macro   0x000000000002b256      0x429 Core/Src/syscalls.o
- .debug_macro   0x000000000002b67f       0x40 Core/Src/syscalls.o
- .debug_macro   0x000000000002b6bf       0x94 Core/Src/syscalls.o
- .debug_macro   0x000000000002b753       0x57 Core/Src/syscalls.o
- .debug_macro   0x000000000002b7aa      0x330 Core/Src/syscalls.o
- .debug_macro   0x000000000002bada       0x10 Core/Src/syscalls.o
- .debug_macro   0x000000000002baea       0x10 Core/Src/syscalls.o
- .debug_macro   0x000000000002bafa       0x35 Core/Src/syscalls.o
- .debug_macro   0x000000000002bb2f      0x122 Core/Src/syscalls.o
- .debug_macro   0x000000000002bc51       0x10 Core/Src/syscalls.o
- .debug_macro   0x000000000002bc61      0x241 Core/Src/syscalls.o
- .debug_macro   0x000000000002bea2       0x10 Core/Src/syscalls.o
- .debug_macro   0x000000000002beb2      0x189 Core/Src/syscalls.o
- .debug_macro   0x000000000002c03b       0x16 Core/Src/syscalls.o
- .debug_macro   0x000000000002c051       0x88 Core/Src/syscalls.o
- .debug_macro   0x000000000002c0d9       0xd9 Core/Src/syscalls.o
- .debug_macro   0x000000000002c1b2       0x56 Core/Src/syscalls.o
- .debug_macro   0x000000000002c208      0x1ae Core/Src/sysmem.o
- .debug_macro   0x000000000002c3b6      0x23b Core/Src/sysmem.o
- .debug_macro   0x000000000002c5f1       0x16 Core/Src/sysmem.o
- .debug_macro   0x000000000002c607      0x232 Core/Src/system_stm32l4xx.o
- .debug_macro   0x000000000002c839      0x769 Core/Src/usart.o
- .debug_macro   0x000000000002cfa2      0x769 Core/Src/usb_otg.o
- .debug_macro   0x000000000002d70b      0x36d Core/lib/mbedtls/aes.o
- .debug_macro   0x000000000002da78       0x25 Core/lib/mbedtls/aes.o
- .debug_macro   0x000000000002da9d       0x16 Core/lib/mbedtls/aes.o
- .debug_macro   0x000000000002dab3       0x16 Core/lib/mbedtls/aes.o
- .debug_macro   0x000000000002dac9      0x2a7 Core/lib/mbedtls/arc4.o
- .debug_macro   0x000000000002dd70      0x2df Core/lib/mbedtls/asn1parse.o
- .debug_macro   0x000000000002e04f      0x2d8 Core/lib/mbedtls/asn1write.o
- .debug_macro   0x000000000002e327      0x2bb Core/lib/mbedtls/base64.o
- .debug_macro   0x000000000002e5e2       0x10 Core/lib/mbedtls/base64.o
- .debug_macro   0x000000000002e5f2      0x327 Core/lib/mbedtls/bignum.o
- .debug_macro   0x000000000002e919       0x26 Core/lib/mbedtls/bignum.o
- .debug_macro   0x000000000002e93f      0x1bd Core/lib/mbedtls/blowfish.o
- .debug_macro   0x000000000002eafc       0x40 Core/lib/mbedtls/blowfish.o
- .debug_macro   0x000000000002eb3c      0x32a Core/lib/mbedtls/camellia.o
- .debug_macro   0x000000000002ee66       0x28 Core/lib/mbedtls/camellia.o
- .debug_macro   0x000000000002ee8e      0x2f3 Core/lib/mbedtls/ccm.o
- .debug_macro   0x000000000002f181       0x16 Core/lib/mbedtls/ccm.o
- .debug_macro   0x000000000002f197      0x2f7 Core/lib/mbedtls/chacha20.o
- .debug_macro   0x000000000002f48e       0x16 Core/lib/mbedtls/chacha20.o
- .debug_macro   0x000000000002f4a4      0x315 Core/lib/mbedtls/chachapoly.o
- .debug_macro   0x000000000002f7b9       0x16 Core/lib/mbedtls/chachapoly.o
- .debug_macro   0x000000000002f7cf       0x10 Core/lib/mbedtls/chachapoly.o
- .debug_macro   0x000000000002f7df      0x32b Core/lib/mbedtls/cipher.o
- .debug_macro   0x000000000002fb0a       0x28 Core/lib/mbedtls/cipher.o
- .debug_macro   0x000000000002fb32       0x1c Core/lib/mbedtls/cipher.o
- .debug_macro   0x000000000002fb4e      0x363 Core/lib/mbedtls/cipher_wrap.o
- .debug_macro   0x000000000002feb1       0x22 Core/lib/mbedtls/cipher_wrap.o
- .debug_macro   0x000000000002fed3      0x2de Core/lib/mbedtls/ctr_drbg.o
- .debug_macro   0x00000000000301b1      0x3ac Core/lib/mbedtls/debug.o
- .debug_macro   0x000000000003055d       0x4c Core/lib/mbedtls/debug.o
- .debug_macro   0x00000000000305a9      0x2f7 Core/lib/mbedtls/des.o
- .debug_macro   0x00000000000308a0      0x310 Core/lib/mbedtls/dhm.o
- .debug_macro   0x0000000000030bb0       0xee Core/lib/mbedtls/dhm.o
- .debug_macro   0x0000000000030c9e       0x3a Core/lib/mbedtls/dhm.o
- .debug_macro   0x0000000000030cd8      0x1cc Core/lib/mbedtls/ecdh.o
- .debug_macro   0x0000000000030ea4       0x85 Core/lib/mbedtls/ecdh.o
- .debug_macro   0x0000000000030f29      0x34d Core/lib/mbedtls/ecdsa.o
- .debug_macro   0x0000000000031276       0x18 Core/lib/mbedtls/ecdsa.o
- .debug_macro   0x000000000003128e       0x54 Core/lib/mbedtls/ecdsa.o
- .debug_macro   0x00000000000312e2      0x343 Core/lib/mbedtls/ecp.o
- .debug_macro   0x0000000000031625       0x16 Core/lib/mbedtls/ecp.o
- .debug_macro   0x000000000003163b      0x2e9 Core/lib/mbedtls/ecp_curves.o
- .debug_macro   0x0000000000031924      0x2f4 Core/lib/mbedtls/entropy.o
- .debug_macro   0x0000000000031c18       0x1c Core/lib/mbedtls/entropy.o
- .debug_macro   0x0000000000031c34      0x320 Core/lib/mbedtls/gcm.o
- .debug_macro   0x0000000000031f54       0x22 Core/lib/mbedtls/gcm.o
- .debug_macro   0x0000000000031f76      0x2c3 Core/lib/mbedtls/hmac_drbg.o
- .debug_macro   0x0000000000032239       0x4e Core/lib/mbedtls/hmac_drbg.o
- .debug_macro   0x0000000000032287      0x2b9 Core/lib/mbedtls/md.o
- .debug_macro   0x0000000000032540      0x312 Core/lib/mbedtls/md5.o
- .debug_macro   0x0000000000032852      0x2fd Core/lib/mbedtls/md_wrap.o
- .debug_macro   0x0000000000032b4f      0x4eb Core/lib/mbedtls/net_sockets.o
- .debug_macro   0x000000000003303a       0x5c Core/lib/mbedtls/net_sockets.o
- .debug_macro   0x0000000000033096       0xb6 Core/lib/mbedtls/net_sockets.o
- .debug_macro   0x000000000003314c       0x16 Core/lib/mbedtls/net_sockets.o
- .debug_macro   0x0000000000033162      0x129 Core/lib/mbedtls/net_sockets.o
- .debug_macro   0x000000000003328b      0x381 Core/lib/mbedtls/oid.o
- .debug_macro   0x000000000003360c      0x32b Core/lib/mbedtls/pem.o
- .debug_macro   0x0000000000033937      0x169 Core/lib/mbedtls/pk.o
- .debug_macro   0x0000000000033aa0       0x70 Core/lib/mbedtls/pk.o
- .debug_macro   0x0000000000033b10      0x325 Core/lib/mbedtls/pk_wrap.o
- .debug_macro   0x0000000000033e35      0x3aa Core/lib/mbedtls/pkparse.o
- .debug_macro   0x00000000000341df      0x258 Core/lib/mbedtls/platform_util.o
- .debug_macro   0x0000000000034437       0x22 Core/lib/mbedtls/platform_util.o
- .debug_macro   0x0000000000034459       0x1c Core/lib/mbedtls/platform_util.o
- .debug_macro   0x0000000000034475      0x2e7 Core/lib/mbedtls/poly1305.o
- .debug_macro   0x000000000003475c      0x40d Core/lib/mbedtls/ripemd160.o
- .debug_macro   0x0000000000034b69      0x3c2 Core/lib/mbedtls/rsa.o
- .debug_macro   0x0000000000034f2b      0x119 Core/lib/mbedtls/rsa_internal.o
- .debug_macro   0x0000000000035044      0x355 Core/lib/mbedtls/sha1.o
- .debug_macro   0x0000000000035399      0x326 Core/lib/mbedtls/sha256.o
- .debug_macro   0x00000000000356bf      0x325 Core/lib/mbedtls/sha512.o
- .debug_macro   0x00000000000359e4      0x39f Core/lib/mbedtls/ssl_ciphersuites.o
- .debug_macro   0x0000000000035d83      0x400 Core/lib/mbedtls/ssl_cli.o
- .debug_macro   0x0000000000036183       0xb3 Core/lib/mbedtls/ssl_cli.o
- .debug_macro   0x0000000000036236      0x442 Core/lib/mbedtls/ssl_tls.o
- .debug_macro   0x0000000000036678      0x39d Core/lib/mbedtls/x509.o
- .debug_macro   0x0000000000036a15      0x3a6 Core/lib/mbedtls/x509_crt.o
- .debug_macro   0x0000000000036dbb      0x767 Core/lib/mbedtls_entropy.o
- .debug_macro   0x0000000000037522      0x4df Core/lib/net_conf.o
- .debug_macro   0x0000000000037a01      0x694 Core/lib/net_mbedtls.o
- .debug_macro   0x0000000000038095      0x257 Core/lib/wifi_Src/es_wifi.o
- .debug_macro   0x00000000000382ec      0x3f0 Core/lib/wifi_Src/es_wifi_io.o
- .debug_macro   0x00000000000386dc      0x259 Core/lib/wifi_Src/stm32l475e_iot01.o
- .debug_macro   0x0000000000038935      0x1ba Core/lib/wifi_Src/stm32l475e_iot01.o
- .debug_macro   0x0000000000038aef      0x3f1 Core/lib/wifi_Src/wifi.o
- .debug_macro   0x0000000000038ee0      0x27a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
- .debug_macro   0x000000000003915a      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
- .debug_macro   0x0000000000039386      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
- .debug_macro   0x00000000000395d6      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
- .debug_macro   0x0000000000039802      0x26b Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
- .debug_macro   0x0000000000039a6d      0x2f1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
- .debug_macro   0x0000000000039d5e      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
- .debug_macro   0x0000000000039f8a      0x238 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
- .debug_macro   0x000000000003a1c2      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
- .debug_macro   0x000000000003a3ee      0x244 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
- .debug_macro   0x000000000003a632      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
- .debug_macro   0x000000000003a882      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
- .debug_macro   0x000000000003aad2      0x26e Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
- .debug_macro   0x000000000003ad40      0x262 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
- .debug_macro   0x000000000003afa2      0x232 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
- .debug_macro   0x000000000003b1d4      0x234 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
- .debug_macro   0x000000000003b408      0x257 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
- .debug_macro   0x000000000003b65f      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
+ .debug_macro   0x000000000002855b      0x7f5 Core/Src/main.o
+ .debug_macro   0x0000000000028d50      0x769 Core/Src/quadspi.o
+ .debug_macro   0x00000000000294b9      0x769 Core/Src/rng.o
+ .debug_macro   0x0000000000029c22      0x769 Core/Src/spi.o
+ .debug_macro   0x000000000002a38b      0x75d Core/Src/stm32l4xx_hal_msp.o
+ .debug_macro   0x000000000002aae8      0x768 Core/Src/stm32l4xx_it.o
+ .debug_macro   0x000000000002b250      0x429 Core/Src/syscalls.o
+ .debug_macro   0x000000000002b679       0x40 Core/Src/syscalls.o
+ .debug_macro   0x000000000002b6b9       0x94 Core/Src/syscalls.o
+ .debug_macro   0x000000000002b74d       0x57 Core/Src/syscalls.o
+ .debug_macro   0x000000000002b7a4      0x330 Core/Src/syscalls.o
+ .debug_macro   0x000000000002bad4       0x10 Core/Src/syscalls.o
+ .debug_macro   0x000000000002bae4       0x10 Core/Src/syscalls.o
+ .debug_macro   0x000000000002baf4       0x35 Core/Src/syscalls.o
+ .debug_macro   0x000000000002bb29      0x122 Core/Src/syscalls.o
+ .debug_macro   0x000000000002bc4b       0x10 Core/Src/syscalls.o
+ .debug_macro   0x000000000002bc5b      0x241 Core/Src/syscalls.o
+ .debug_macro   0x000000000002be9c       0x10 Core/Src/syscalls.o
+ .debug_macro   0x000000000002beac      0x189 Core/Src/syscalls.o
+ .debug_macro   0x000000000002c035       0x16 Core/Src/syscalls.o
+ .debug_macro   0x000000000002c04b       0x88 Core/Src/syscalls.o
+ .debug_macro   0x000000000002c0d3       0xd9 Core/Src/syscalls.o
+ .debug_macro   0x000000000002c1ac       0x56 Core/Src/syscalls.o
+ .debug_macro   0x000000000002c202      0x1ae Core/Src/sysmem.o
+ .debug_macro   0x000000000002c3b0      0x23b Core/Src/sysmem.o
+ .debug_macro   0x000000000002c5eb       0x16 Core/Src/sysmem.o
+ .debug_macro   0x000000000002c601      0x232 Core/Src/system_stm32l4xx.o
+ .debug_macro   0x000000000002c833      0x769 Core/Src/usart.o
+ .debug_macro   0x000000000002cf9c      0x769 Core/Src/usb_otg.o
+ .debug_macro   0x000000000002d705      0x36d Core/lib/mbedtls/aes.o
+ .debug_macro   0x000000000002da72       0x25 Core/lib/mbedtls/aes.o
+ .debug_macro   0x000000000002da97       0x16 Core/lib/mbedtls/aes.o
+ .debug_macro   0x000000000002daad       0x16 Core/lib/mbedtls/aes.o
+ .debug_macro   0x000000000002dac3      0x2a7 Core/lib/mbedtls/arc4.o
+ .debug_macro   0x000000000002dd6a      0x2df Core/lib/mbedtls/asn1parse.o
+ .debug_macro   0x000000000002e049      0x2d8 Core/lib/mbedtls/asn1write.o
+ .debug_macro   0x000000000002e321      0x2bb Core/lib/mbedtls/base64.o
+ .debug_macro   0x000000000002e5dc       0x10 Core/lib/mbedtls/base64.o
+ .debug_macro   0x000000000002e5ec      0x327 Core/lib/mbedtls/bignum.o
+ .debug_macro   0x000000000002e913       0x26 Core/lib/mbedtls/bignum.o
+ .debug_macro   0x000000000002e939      0x1bd Core/lib/mbedtls/blowfish.o
+ .debug_macro   0x000000000002eaf6       0x40 Core/lib/mbedtls/blowfish.o
+ .debug_macro   0x000000000002eb36      0x32a Core/lib/mbedtls/camellia.o
+ .debug_macro   0x000000000002ee60       0x28 Core/lib/mbedtls/camellia.o
+ .debug_macro   0x000000000002ee88      0x2f3 Core/lib/mbedtls/ccm.o
+ .debug_macro   0x000000000002f17b       0x16 Core/lib/mbedtls/ccm.o
+ .debug_macro   0x000000000002f191      0x2f7 Core/lib/mbedtls/chacha20.o
+ .debug_macro   0x000000000002f488       0x16 Core/lib/mbedtls/chacha20.o
+ .debug_macro   0x000000000002f49e      0x315 Core/lib/mbedtls/chachapoly.o
+ .debug_macro   0x000000000002f7b3       0x16 Core/lib/mbedtls/chachapoly.o
+ .debug_macro   0x000000000002f7c9       0x10 Core/lib/mbedtls/chachapoly.o
+ .debug_macro   0x000000000002f7d9      0x32b Core/lib/mbedtls/cipher.o
+ .debug_macro   0x000000000002fb04       0x28 Core/lib/mbedtls/cipher.o
+ .debug_macro   0x000000000002fb2c       0x1c Core/lib/mbedtls/cipher.o
+ .debug_macro   0x000000000002fb48      0x363 Core/lib/mbedtls/cipher_wrap.o
+ .debug_macro   0x000000000002feab       0x22 Core/lib/mbedtls/cipher_wrap.o
+ .debug_macro   0x000000000002fecd      0x2de Core/lib/mbedtls/ctr_drbg.o
+ .debug_macro   0x00000000000301ab      0x3ac Core/lib/mbedtls/debug.o
+ .debug_macro   0x0000000000030557       0x4c Core/lib/mbedtls/debug.o
+ .debug_macro   0x00000000000305a3      0x2f7 Core/lib/mbedtls/des.o
+ .debug_macro   0x000000000003089a      0x310 Core/lib/mbedtls/dhm.o
+ .debug_macro   0x0000000000030baa       0xee Core/lib/mbedtls/dhm.o
+ .debug_macro   0x0000000000030c98       0x3a Core/lib/mbedtls/dhm.o
+ .debug_macro   0x0000000000030cd2      0x1cc Core/lib/mbedtls/ecdh.o
+ .debug_macro   0x0000000000030e9e       0x85 Core/lib/mbedtls/ecdh.o
+ .debug_macro   0x0000000000030f23      0x34d Core/lib/mbedtls/ecdsa.o
+ .debug_macro   0x0000000000031270       0x18 Core/lib/mbedtls/ecdsa.o
+ .debug_macro   0x0000000000031288       0x54 Core/lib/mbedtls/ecdsa.o
+ .debug_macro   0x00000000000312dc      0x343 Core/lib/mbedtls/ecp.o
+ .debug_macro   0x000000000003161f       0x16 Core/lib/mbedtls/ecp.o
+ .debug_macro   0x0000000000031635      0x2e9 Core/lib/mbedtls/ecp_curves.o
+ .debug_macro   0x000000000003191e      0x2f4 Core/lib/mbedtls/entropy.o
+ .debug_macro   0x0000000000031c12       0x1c Core/lib/mbedtls/entropy.o
+ .debug_macro   0x0000000000031c2e      0x320 Core/lib/mbedtls/gcm.o
+ .debug_macro   0x0000000000031f4e       0x22 Core/lib/mbedtls/gcm.o
+ .debug_macro   0x0000000000031f70      0x2c3 Core/lib/mbedtls/hmac_drbg.o
+ .debug_macro   0x0000000000032233       0x4e Core/lib/mbedtls/hmac_drbg.o
+ .debug_macro   0x0000000000032281      0x2b9 Core/lib/mbedtls/md.o
+ .debug_macro   0x000000000003253a      0x312 Core/lib/mbedtls/md5.o
+ .debug_macro   0x000000000003284c      0x2fd Core/lib/mbedtls/md_wrap.o
+ .debug_macro   0x0000000000032b49      0x4eb Core/lib/mbedtls/net_sockets.o
+ .debug_macro   0x0000000000033034       0x5c Core/lib/mbedtls/net_sockets.o
+ .debug_macro   0x0000000000033090       0xb6 Core/lib/mbedtls/net_sockets.o
+ .debug_macro   0x0000000000033146       0x16 Core/lib/mbedtls/net_sockets.o
+ .debug_macro   0x000000000003315c      0x129 Core/lib/mbedtls/net_sockets.o
+ .debug_macro   0x0000000000033285      0x381 Core/lib/mbedtls/oid.o
+ .debug_macro   0x0000000000033606      0x32b Core/lib/mbedtls/pem.o
+ .debug_macro   0x0000000000033931      0x169 Core/lib/mbedtls/pk.o
+ .debug_macro   0x0000000000033a9a       0x70 Core/lib/mbedtls/pk.o
+ .debug_macro   0x0000000000033b0a      0x325 Core/lib/mbedtls/pk_wrap.o
+ .debug_macro   0x0000000000033e2f      0x3aa Core/lib/mbedtls/pkparse.o
+ .debug_macro   0x00000000000341d9      0x258 Core/lib/mbedtls/platform_util.o
+ .debug_macro   0x0000000000034431       0x22 Core/lib/mbedtls/platform_util.o
+ .debug_macro   0x0000000000034453       0x1c Core/lib/mbedtls/platform_util.o
+ .debug_macro   0x000000000003446f      0x2e7 Core/lib/mbedtls/poly1305.o
+ .debug_macro   0x0000000000034756      0x40d Core/lib/mbedtls/ripemd160.o
+ .debug_macro   0x0000000000034b63      0x3c2 Core/lib/mbedtls/rsa.o
+ .debug_macro   0x0000000000034f25      0x119 Core/lib/mbedtls/rsa_internal.o
+ .debug_macro   0x000000000003503e      0x355 Core/lib/mbedtls/sha1.o
+ .debug_macro   0x0000000000035393      0x326 Core/lib/mbedtls/sha256.o
+ .debug_macro   0x00000000000356b9      0x325 Core/lib/mbedtls/sha512.o
+ .debug_macro   0x00000000000359de      0x39f Core/lib/mbedtls/ssl_ciphersuites.o
+ .debug_macro   0x0000000000035d7d      0x400 Core/lib/mbedtls/ssl_cli.o
+ .debug_macro   0x000000000003617d       0xb3 Core/lib/mbedtls/ssl_cli.o
+ .debug_macro   0x0000000000036230      0x442 Core/lib/mbedtls/ssl_tls.o
+ .debug_macro   0x0000000000036672      0x39d Core/lib/mbedtls/x509.o
+ .debug_macro   0x0000000000036a0f      0x3a6 Core/lib/mbedtls/x509_crt.o
+ .debug_macro   0x0000000000036db5      0x767 Core/lib/mbedtls_entropy.o
+ .debug_macro   0x000000000003751c      0x4df Core/lib/net_conf.o
+ .debug_macro   0x00000000000379fb      0x694 Core/lib/net_mbedtls.o
+ .debug_macro   0x000000000003808f      0x257 Core/lib/wifi_Src/es_wifi.o
+ .debug_macro   0x00000000000382e6      0x3f0 Core/lib/wifi_Src/es_wifi_io.o
+ .debug_macro   0x00000000000386d6      0x259 Core/lib/wifi_Src/stm32l475e_iot01.o
+ .debug_macro   0x000000000003892f      0x1ba Core/lib/wifi_Src/stm32l475e_iot01.o
+ .debug_macro   0x0000000000038ae9      0x3f1 Core/lib/wifi_Src/wifi.o
+ .debug_macro   0x0000000000038eda      0x27a Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_macro   0x0000000000039154      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_macro   0x0000000000039380      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
+ .debug_macro   0x00000000000395d0      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_macro   0x00000000000397fc      0x26b Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_macro   0x0000000000039a67      0x2f1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
+ .debug_macro   0x0000000000039d58      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
+ .debug_macro   0x0000000000039f84      0x238 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
+ .debug_macro   0x000000000003a1bc      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
+ .debug_macro   0x000000000003a3e8      0x244 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
+ .debug_macro   0x000000000003a62c      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_macro   0x000000000003a87c      0x250 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
+ .debug_macro   0x000000000003aacc      0x26e Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_macro   0x000000000003ad3a      0x262 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
+ .debug_macro   0x000000000003af9c      0x232 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
+ .debug_macro   0x000000000003b1ce      0x234 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
+ .debug_macro   0x000000000003b402      0x257 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
+ .debug_macro   0x000000000003b659      0x22c Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
 .debug_line     0x0000000000000000    0x42266
  .debug_line    0x0000000000000000      0xf15 Core/Src/dfsdm.o
@@ -23879,178 +23882,178 @@ OUTPUT(prova2.elf elf32-littlearm)
  .debug_line    0x00000000000400da     0x1338 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
  .debug_line    0x0000000000041412      0xe54 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
 
-.debug_str      0x0000000000000000   0x11d442
+.debug_str      0x0000000000000000   0x11cf1a
  .debug_str     0x0000000000000000    0xff9f9 Core/Src/dfsdm.o
                                       0xffed0 (size before relaxing)
  .debug_str     0x00000000000ff9f9      0x42f Core/Src/gpio.o
                                      0x100100 (size before relaxing)
  .debug_str     0x00000000000ffe28      0x407 Core/Src/i2c.o
                                      0x1000b2 (size before relaxing)
- .debug_str     0x000000000010022f     0x1d03 Core/Src/main.o
-                                     0x102252 (size before relaxing)
- .debug_str     0x0000000000101f32       0x55 Core/Src/quadspi.o
+ .debug_str     0x000000000010022f     0x17db Core/Src/main.o
+                                     0x101d36 (size before relaxing)
+ .debug_str     0x0000000000101a0a       0x55 Core/Src/quadspi.o
                                       0xffffa (size before relaxing)
- .debug_str     0x0000000000101f87       0x4a Core/Src/rng.o
+ .debug_str     0x0000000000101a5f       0x4a Core/Src/rng.o
                                       0xffc8e (size before relaxing)
- .debug_str     0x0000000000101fd1       0x41 Core/Src/spi.o
+ .debug_str     0x0000000000101aa9       0x41 Core/Src/spi.o
                                       0xfffee (size before relaxing)
- .debug_str     0x0000000000102012       0x2c Core/Src/stm32l4xx_hal_msp.o
+ .debug_str     0x0000000000101aea       0x2c Core/Src/stm32l4xx_hal_msp.o
                                       0xffb88 (size before relaxing)
- .debug_str     0x000000000010203e       0xf6 Core/Src/stm32l4xx_it.o
+ .debug_str     0x0000000000101b16       0xf6 Core/Src/stm32l4xx_it.o
                                       0xffb16 (size before relaxing)
- .debug_str     0x0000000000102134     0x1062 Core/Src/syscalls.o
+ .debug_str     0x0000000000101c0c     0x1062 Core/Src/syscalls.o
                                       0xec1fe (size before relaxing)
- .debug_str     0x0000000000103196       0x2e Core/Src/sysmem.o
+ .debug_str     0x0000000000102c6e       0x2e Core/Src/sysmem.o
                                        0x7aea (size before relaxing)
- .debug_str     0x00000000001031c4       0xcd Core/Src/system_stm32l4xx.o
+ .debug_str     0x0000000000102c9c       0xcd Core/Src/system_stm32l4xx.o
                                       0xe7043 (size before relaxing)
- .debug_str     0x0000000000103291       0x6b Core/Src/usart.o
+ .debug_str     0x0000000000102d69       0x6b Core/Src/usart.o
                                      0x10000b (size before relaxing)
- .debug_str     0x00000000001032fc       0x59 Core/Src/usb_otg.o
+ .debug_str     0x0000000000102dd4       0x59 Core/Src/usb_otg.o
                                      0x100020 (size before relaxing)
- .debug_str     0x0000000000103355       0x36 Core/Startup/startup_stm32l475vgtx.o
+ .debug_str     0x0000000000102e2d       0x36 Core/Startup/startup_stm32l475vgtx.o
                                          0x6c (size before relaxing)
- .debug_str     0x000000000010338b     0x1037 Core/lib/mbedtls/aes.o
+ .debug_str     0x0000000000102e63     0x1037 Core/lib/mbedtls/aes.o
                                        0xa80c (size before relaxing)
- .debug_str     0x00000000001043c2      0x103 Core/lib/mbedtls/arc4.o
+ .debug_str     0x0000000000103e9a      0x103 Core/lib/mbedtls/arc4.o
                                        0x8d5c (size before relaxing)
- .debug_str     0x00000000001044c5      0x190 Core/lib/mbedtls/asn1parse.o
+ .debug_str     0x0000000000103f9d      0x190 Core/lib/mbedtls/asn1parse.o
                                        0x9fdd (size before relaxing)
- .debug_str     0x0000000000104655      0x289 Core/lib/mbedtls/asn1write.o
+ .debug_str     0x000000000010412d      0x289 Core/lib/mbedtls/asn1write.o
                                        0xa022 (size before relaxing)
- .debug_str     0x00000000001048de      0x12d Core/lib/mbedtls/base64.o
+ .debug_str     0x00000000001043b6      0x12d Core/lib/mbedtls/base64.o
                                        0x9688 (size before relaxing)
- .debug_str     0x0000000000104a0b      0x8f2 Core/lib/mbedtls/bignum.o
+ .debug_str     0x00000000001044e3      0x8f2 Core/lib/mbedtls/bignum.o
                                        0xa32c (size before relaxing)
- .debug_str     0x00000000001052fd      0x4c3 Core/lib/mbedtls/blowfish.o
+ .debug_str     0x0000000000104dd5      0x4c3 Core/lib/mbedtls/blowfish.o
                                        0x84bf (size before relaxing)
- .debug_str     0x00000000001057c0      0x835 Core/lib/mbedtls/camellia.o
+ .debug_str     0x0000000000105298      0x835 Core/lib/mbedtls/camellia.o
                                        0xa01e (size before relaxing)
- .debug_str     0x0000000000105ff5      0xf18 Core/lib/mbedtls/ccm.o
+ .debug_str     0x0000000000105acd      0xf18 Core/lib/mbedtls/ccm.o
                                        0x9e1b (size before relaxing)
- .debug_str     0x0000000000106f0d      0x4d1 Core/lib/mbedtls/chacha20.o
+ .debug_str     0x00000000001069e5      0x4d1 Core/lib/mbedtls/chacha20.o
                                        0x9b4e (size before relaxing)
- .debug_str     0x00000000001073de      0x4c9 Core/lib/mbedtls/chachapoly.o
+ .debug_str     0x0000000000106eb6      0x4c9 Core/lib/mbedtls/chachapoly.o
                                        0x9cbc (size before relaxing)
- .debug_str     0x00000000001078a7      0x65c Core/lib/mbedtls/cipher.o
+ .debug_str     0x000000000010737f      0x65c Core/lib/mbedtls/cipher.o
                                        0xadd6 (size before relaxing)
- .debug_str     0x0000000000107f03      0xaf1 Core/lib/mbedtls/cipher_wrap.o
+ .debug_str     0x00000000001079db      0xaf1 Core/lib/mbedtls/cipher_wrap.o
                                        0xb8c5 (size before relaxing)
- .debug_str     0x00000000001089f4      0x2c2 Core/lib/mbedtls/ctr_drbg.o
+ .debug_str     0x00000000001084cc      0x2c2 Core/lib/mbedtls/ctr_drbg.o
                                        0x9d76 (size before relaxing)
- .debug_str     0x0000000000108cb6      0x368 Core/lib/mbedtls/debug.o
+ .debug_str     0x000000000010878e      0x368 Core/lib/mbedtls/debug.o
                                       0x1843c (size before relaxing)
- .debug_str     0x000000000010901e      0x762 Core/lib/mbedtls/des.o
+ .debug_str     0x0000000000108af6      0x762 Core/lib/mbedtls/des.o
                                        0x9fe3 (size before relaxing)
- .debug_str     0x0000000000109780      0x470 Core/lib/mbedtls/dhm.o
+ .debug_str     0x0000000000109258      0x470 Core/lib/mbedtls/dhm.o
                                       0x11738 (size before relaxing)
- .debug_str     0x0000000000109bf0      0x376 Core/lib/mbedtls/ecdh.o
+ .debug_str     0x00000000001096c8      0x376 Core/lib/mbedtls/ecdh.o
                                        0x8bae (size before relaxing)
- .debug_str     0x0000000000109f66      0x577 Core/lib/mbedtls/ecdsa.o
+ .debug_str     0x0000000000109a3e      0x577 Core/lib/mbedtls/ecdsa.o
                                        0xab34 (size before relaxing)
- .debug_str     0x000000000010a4dd      0xa44 Core/lib/mbedtls/ecp.o
+ .debug_str     0x0000000000109fb5      0xa44 Core/lib/mbedtls/ecp.o
                                        0xa940 (size before relaxing)
- .debug_str     0x000000000010af21      0xd81 Core/lib/mbedtls/ecp_curves.o
+ .debug_str     0x000000000010a9f9      0xd81 Core/lib/mbedtls/ecp_curves.o
                                        0x961c (size before relaxing)
- .debug_str     0x000000000010bca2      0x1c8 Core/lib/mbedtls/entropy.o
+ .debug_str     0x000000000010b77a      0x1c8 Core/lib/mbedtls/entropy.o
                                        0x9b95 (size before relaxing)
- .debug_str     0x000000000010be6a      0x1e3 Core/lib/mbedtls/gcm.o
+ .debug_str     0x000000000010b942      0x1e3 Core/lib/mbedtls/gcm.o
                                        0xa9e9 (size before relaxing)
- .debug_str     0x000000000010c04d      0x216 Core/lib/mbedtls/hmac_drbg.o
+ .debug_str     0x000000000010bb25      0x216 Core/lib/mbedtls/hmac_drbg.o
                                        0x9347 (size before relaxing)
- .debug_str     0x000000000010c263      0x2c1 Core/lib/mbedtls/md.o
+ .debug_str     0x000000000010bd3b      0x2c1 Core/lib/mbedtls/md.o
                                        0x9163 (size before relaxing)
- .debug_str     0x000000000010c524      0x2dd Core/lib/mbedtls/md5.o
+ .debug_str     0x000000000010bffc      0x2dd Core/lib/mbedtls/md5.o
                                        0x9afc (size before relaxing)
- .debug_str     0x000000000010c801      0x43d Core/lib/mbedtls/md_wrap.o
+ .debug_str     0x000000000010c2d9      0x43d Core/lib/mbedtls/md_wrap.o
                                        0x9d15 (size before relaxing)
- .debug_str     0x000000000010cc3e      0x15b Core/lib/mbedtls/net_sockets.o
+ .debug_str     0x000000000010c716      0x15b Core/lib/mbedtls/net_sockets.o
                                       0xf9d46 (size before relaxing)
- .debug_str     0x000000000010cd99     0x3067 Core/lib/mbedtls/oid.o
+ .debug_str     0x000000000010c871     0x3067 Core/lib/mbedtls/oid.o
                                        0xf17e (size before relaxing)
- .debug_str     0x000000000010fe00      0x12d Core/lib/mbedtls/pem.o
+ .debug_str     0x000000000010f8d8      0x12d Core/lib/mbedtls/pem.o
                                        0xa6ba (size before relaxing)
- .debug_str     0x000000000010ff2d      0x3fc Core/lib/mbedtls/pk.o
+ .debug_str     0x000000000010fa05      0x3fc Core/lib/mbedtls/pk.o
                                        0x77d7 (size before relaxing)
- .debug_str     0x0000000000110329      0x217 Core/lib/mbedtls/pk_wrap.o
+ .debug_str     0x000000000010fe01      0x217 Core/lib/mbedtls/pk_wrap.o
                                        0xaa4b (size before relaxing)
- .debug_str     0x0000000000110540      0x42b Core/lib/mbedtls/pkparse.o
+ .debug_str     0x0000000000110018      0x42b Core/lib/mbedtls/pkparse.o
                                        0xeb99 (size before relaxing)
- .debug_str     0x000000000011096b       0x49 Core/lib/mbedtls/platform_util.o
+ .debug_str     0x0000000000110443       0x49 Core/lib/mbedtls/platform_util.o
                                        0x8338 (size before relaxing)
- .debug_str     0x00000000001109b4      0x21b Core/lib/mbedtls/poly1305.o
+ .debug_str     0x000000000011048c      0x21b Core/lib/mbedtls/poly1305.o
                                        0x9ab1 (size before relaxing)
- .debug_str     0x0000000000110bcf      0x4a8 Core/lib/mbedtls/ripemd160.o
+ .debug_str     0x00000000001106a7      0x4a8 Core/lib/mbedtls/ripemd160.o
                                        0x9d35 (size before relaxing)
- .debug_str     0x0000000000111077      0xa64 Core/lib/mbedtls/rsa.o
+ .debug_str     0x0000000000110b4f      0xa64 Core/lib/mbedtls/rsa.o
                                        0xe611 (size before relaxing)
- .debug_str     0x0000000000111adb       0xcb Core/lib/mbedtls/rsa_internal.o
+ .debug_str     0x00000000001115b3       0xcb Core/lib/mbedtls/rsa_internal.o
                                        0x6b97 (size before relaxing)
- .debug_str     0x0000000000111ba6      0x35a Core/lib/mbedtls/sha1.o
+ .debug_str     0x000000000011167e      0x35a Core/lib/mbedtls/sha1.o
                                        0x9c48 (size before relaxing)
- .debug_str     0x0000000000111f00      0x609 Core/lib/mbedtls/sha256.o
+ .debug_str     0x00000000001119d8      0x609 Core/lib/mbedtls/sha256.o
                                        0x9d26 (size before relaxing)
- .debug_str     0x0000000000112509      0x5ee Core/lib/mbedtls/sha512.o
+ .debug_str     0x0000000000111fe1      0x5ee Core/lib/mbedtls/sha512.o
                                        0x9e0b (size before relaxing)
- .debug_str     0x0000000000112af7      0x3a7 Core/lib/mbedtls/ssl_ciphersuites.o
+ .debug_str     0x00000000001125cf      0x3a7 Core/lib/mbedtls/ssl_ciphersuites.o
                                       0x1808f (size before relaxing)
- .debug_str     0x0000000000112e9e      0xf15 Core/lib/mbedtls/ssl_cli.o
+ .debug_str     0x0000000000112976      0xf15 Core/lib/mbedtls/ssl_cli.o
                                       0x19fcf (size before relaxing)
- .debug_str     0x0000000000113db3     0x126c Core/lib/mbedtls/ssl_tls.o
+ .debug_str     0x000000000011388b     0x126c Core/lib/mbedtls/ssl_tls.o
                                       0x1d12d (size before relaxing)
- .debug_str     0x000000000011501f      0x32f Core/lib/mbedtls/x509.o
+ .debug_str     0x0000000000114af7      0x32f Core/lib/mbedtls/x509.o
                                        0xf342 (size before relaxing)
- .debug_str     0x000000000011534e      0x7af Core/lib/mbedtls/x509_crt.o
+ .debug_str     0x0000000000114e26      0x7af Core/lib/mbedtls/x509_crt.o
                                        0xeb30 (size before relaxing)
- .debug_str     0x0000000000115afd       0x40 Core/lib/mbedtls_entropy.o
+ .debug_str     0x00000000001155d5       0x40 Core/lib/mbedtls_entropy.o
                                       0xffa9c (size before relaxing)
- .debug_str     0x0000000000115b3d      0x3ec Core/lib/net_conf.o
+ .debug_str     0x0000000000115615      0x3ec Core/lib/net_conf.o
                                       0xef9b8 (size before relaxing)
- .debug_str     0x0000000000115f29      0x98e Core/lib/net_mbedtls.o
+ .debug_str     0x0000000000115a01      0x98e Core/lib/net_mbedtls.o
                                       0xfe9b8 (size before relaxing)
- .debug_str     0x00000000001168b7      0xb5b Core/lib/wifi_Src/es_wifi.o
+ .debug_str     0x000000000011638f      0xb5b Core/lib/wifi_Src/es_wifi.o
                                        0x92cf (size before relaxing)
- .debug_str     0x0000000000117412       0x6c Core/lib/wifi_Src/es_wifi_io.o
+ .debug_str     0x0000000000116eea       0x6c Core/lib/wifi_Src/es_wifi_io.o
                                       0xec13a (size before relaxing)
- .debug_str     0x000000000011747e      0x553 Core/lib/wifi_Src/stm32l475e_iot01.o
+ .debug_str     0x0000000000116f56      0x553 Core/lib/wifi_Src/stm32l475e_iot01.o
                                       0xe8dc8 (size before relaxing)
- .debug_str     0x00000000001179d1      0x1ea Core/lib/wifi_Src/wifi.o
+ .debug_str     0x00000000001174a9      0x1ea Core/lib/wifi_Src/wifi.o
                                       0xebea1 (size before relaxing)
- .debug_str     0x0000000000117bbb      0x586 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
+ .debug_str     0x0000000000117693      0x586 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
                                       0xe7b11 (size before relaxing)
- .debug_str     0x0000000000118141      0x388 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
+ .debug_str     0x0000000000117c19      0x388 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.o
                                       0xe788d (size before relaxing)
- .debug_str     0x00000000001184c9      0xc23 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
+ .debug_str     0x0000000000117fa1      0xc23 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dfsdm.o
                                       0xe7f0c (size before relaxing)
- .debug_str     0x00000000001190ec      0x253 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
+ .debug_str     0x0000000000118bc4      0x253 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.o
                                       0xe729b (size before relaxing)
- .debug_str     0x000000000011933f      0x208 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
+ .debug_str     0x0000000000118e17      0x208 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.o
                                       0xe72c2 (size before relaxing)
- .debug_str     0x0000000000119547      0xd2d Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
+ .debug_str     0x000000000011901f      0xd2d Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c.o
                                       0xe8154 (size before relaxing)
- .debug_str     0x000000000011a274       0xb8 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
+ .debug_str     0x0000000000119d4c       0xb8 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_i2c_ex.o
                                       0xe754c (size before relaxing)
- .debug_str     0x000000000011a32c      0x536 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
+ .debug_str     0x0000000000119e04      0x536 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd.o
                                       0xe77a7 (size before relaxing)
- .debug_str     0x000000000011a862      0x1b4 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
+ .debug_str     0x000000000011a33a      0x1b4 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pcd_ex.o
                                       0xe741f (size before relaxing)
- .debug_str     0x000000000011aa16      0x2f1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
+ .debug_str     0x000000000011a4ee      0x2f1 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr.o
                                       0xe735a (size before relaxing)
- .debug_str     0x000000000011ad07      0x439 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
+ .debug_str     0x000000000011a7df      0x439 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.o
                                       0xe755e (size before relaxing)
- .debug_str     0x000000000011b140      0x6b3 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
+ .debug_str     0x000000000011ac18      0x6b3 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_qspi.o
                                       0xe7922 (size before relaxing)
- .debug_str     0x000000000011b7f3      0x3aa Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
+ .debug_str     0x000000000011b2cb      0x3aa Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.o
                                       0xe7605 (size before relaxing)
- .debug_str     0x000000000011bb9d      0x3a6 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
+ .debug_str     0x000000000011b675      0x3a6 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.o
                                       0xe7796 (size before relaxing)
- .debug_str     0x000000000011bf43      0x175 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
+ .debug_str     0x000000000011ba1b      0x175 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rng.o
                                       0xe70c6 (size before relaxing)
- .debug_str     0x000000000011c0b8      0x4f5 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
+ .debug_str     0x000000000011bb90      0x4f5 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_spi.o
                                       0xe77d5 (size before relaxing)
- .debug_str     0x000000000011c5ad      0x81f Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
+ .debug_str     0x000000000011c085      0x81f Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.o
                                       0xe7c0d (size before relaxing)
- .debug_str     0x000000000011cdcc      0x676 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
+ .debug_str     0x000000000011c8a4      0x676 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_ll_usb.o
                                       0xe790e (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
