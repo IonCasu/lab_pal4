@@ -15,7 +15,7 @@ es_wifi.c:610:13:AT_ParseTransportSettings	24	static
 es_wifi.c:677:13:AT_ParseIsConnected	16	static
 es_wifi.c:688:13:AT_ParsePing	40	static
 es_wifi.c:717:25:AT_ExecuteCommand	40	static
-es_wifi.c:767:25:AT_RequestSendData	32	static
+es_wifi.c:767:25:AT_RequestSendData	40	static
 es_wifi.c:830:25:AT_RequestReceiveData	40	static
 es_wifi.c:887:19:ES_WIFI_Init	24	static
 es_wifi.c:914:19:ES_WIFI_GetProductID	16	static

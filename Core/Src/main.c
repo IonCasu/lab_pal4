@@ -45,16 +45,14 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define TERMINAL_USE
-#define DEBUG_LEVEL 1
+#define DEBUG_LEVEL 2
 
 /* Update SSID and PASSWORD with own Access point settings */
-#define RemotePORT	4433
-#define SERVER_PORT "4433"
-#define SERVER_NAME "192.168.1.129"
+#define SERVER_PORT 8883
+//#define SERVER_NAME "192.168.1.129"
+#define SERVER_NAME "test.mosquitto.org"
 #define WIFI_WRITE_TIMEOUT 10000
 #define WIFI_READ_TIMEOUT  10000
-#define WRITE_BUF_SIZE	100
-#define READ_BUF_SIZE	100
 
 #if defined (TERMINAL_USE)
 #define TERMOUT(...)  printf(__VA_ARGS__)
@@ -109,7 +107,7 @@ mbedtls_x509_crt cacert;
 		"-----END CERTIFICATE-----\r\n";*/
 
 //key-size: 4096
-const unsigned char certificate[] =
+/*const unsigned char certificate[] =
 		"-----BEGIN CERTIFICATE-----\r\n" 									   \
 		"MIIFQjCCAyqgAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRIwEAYDVQQDDAlsb2Nh\r\n" \
 		"bGhvc3QxFzAVBgNVBAoMDm15b3JnYW5pemF0aW9uMQswCQYDVQQGEwJOTDAeFw0y\r\n" \
@@ -140,6 +138,89 @@ const unsigned char certificate[] =
 		"3K0CrDx8OJuzsJaiWmcWd4QMfgeRECJobTCWBjsJ0Z8VAB4VnSBY2FH6L1j4VQQb\r\n" \
 		"DOmOtSKSSEKeIG4rNLfD0Zwbf2ZcfoNcnBuxDDwgkBqDRrdVucpMnHZShSnCfWj1\r\n" \
 		"rqfkhnKu\r\n" 														   \
+		"-----END CERTIFICATE-----\r\n";*/
+
+//key-size: 8192
+/*const unsigned char certificate[] =
+		"-----BEGIN CERTIFICATE-----\r\n" 									   \
+		"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\r\n" \
+		"6NKRISnwVctYoyWVzGPf/xmj6bfOOw==\r\n" 								   \
+		"-----END CERTIFICATE-----\r\n";*/
+
+
+//mosquitto broker
+const unsigned char certificate[] =
+		"-----BEGIN CERTIFICATE-----\r\n" 									   \
+		"MIIEAzCCAuugAwIBAgIUBY1hlCGvdj4NhBXkZ/uLUZNILAwwDQYJKoZIhvcNAQEL\r\n" \
+		"BQAwgZAxCzAJBgNVBAYTAkdCMRcwFQYDVQQIDA5Vbml0ZWQgS2luZ2RvbTEOMAwG\r\n" \
+		"A1UEBwwFRGVyYnkxEjAQBgNVBAoMCU1vc3F1aXR0bzELMAkGA1UECwwCQ0ExFjAU\r\n" \
+		"BgNVBAMMDW1vc3F1aXR0by5vcmcxHzAdBgkqhkiG9w0BCQEWEHJvZ2VyQGF0Y2hv\r\n" \
+		"by5vcmcwHhcNMjAwNjA5MTEwNjM5WhcNMzAwNjA3MTEwNjM5WjCBkDELMAkGA1UE\r\n" \
+		"BhMCR0IxFzAVBgNVBAgMDlVuaXRlZCBLaW5nZG9tMQ4wDAYDVQQHDAVEZXJieTES\r\n" \
+		"MBAGA1UECgwJTW9zcXVpdHRvMQswCQYDVQQLDAJDQTEWMBQGA1UEAwwNbW9zcXVp\r\n" \
+		"dHRvLm9yZzEfMB0GCSqGSIb3DQEJARYQcm9nZXJAYXRjaG9vLm9yZzCCASIwDQYJ\r\n" \
+		"KoZIhvcNAQEBBQADggEPADCCAQoCggEBAME0HKmIzfTOwkKLT3THHe+ObdizamPg\r\n" \
+		"UZmD64Tf3zJdNeYGYn4CEXbyP6fy3tWc8S2boW6dzrH8SdFf9uo320GJA9B7U1FW\r\n" \
+		"Te3xda/Lm3JFfaHjkWw7jBwcauQZjpGINHapHRlpiCZsquAthOgxW9SgDgYlGzEA\r\n" \
+		"s06pkEFiMw+qDfLo/sxFKB6vQlFekMeCymjLCbNwPJyqyhFmPWwio/PDMruBTzPH\r\n" \
+		"3cioBnrJWKXc3OjXdLGFJOfj7pP0j/dr2LH72eSvv3PQQFl90CZPFhrCUcRHSSxo\r\n" \
+		"E6yjGOdnz7f6PveLIB574kQORwt8ePn0yidrTC1ictikED3nHYhMUOUCAwEAAaNT\r\n" \
+		"MFEwHQYDVR0OBBYEFPVV6xBUFPiGKDyo5V3+Hbh4N9YSMB8GA1UdIwQYMBaAFPVV\r\n" \
+		"6xBUFPiGKDyo5V3+Hbh4N9YSMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL\r\n" \
+		"BQADggEBAGa9kS21N70ThM6/Hj9D7mbVxKLBjVWe2TPsGfbl3rEDfZ+OKRZ2j6AC\r\n" \
+		"6r7jb4TZO3dzF2p6dgbrlU71Y/4K0TdzIjRj3cQ3KSm41JvUQ0hZ/c04iGDg/xWf\r\n" \
+		"+pp58nfPAYwuerruPNWmlStWAXf0UTqRtg4hQDWBuUFDJTuWuuBvEXudz74eh/wK\r\n" \
+		"sMwfu1HFvjy5Z0iMDU8PUDepjVolOCue9ashlS4EB5IECdSR2TItnAIiIwimx839\r\n" \
+		"LdUdRudafMu5T5Xma182OC0/u/xRlEm+tvKGGmfFcN0piqVl8OrSPBgIlb+1IKJE\r\n" \
+		"m/XriWr/Cq4h/JfB7NTsezVslgkBaoU=\r\n" 								   \
 		"-----END CERTIFICATE-----\r\n";
 
 /* USER CODE END PV */
@@ -225,10 +306,12 @@ int main(void)
   BSP_COM_Init(COM1, &hDiscoUart);
 #endif /* TERMINAL_USE */
 
+
+  /*int len;
+  unsigned char buf[1024];*/
+
   int ret;
-   int len;
   uint32_t flags;
-  unsigned char buf[1024];
   const char *pers = "ssl_client1";
   uint32_t read_timeout=10000;
 
@@ -286,10 +369,10 @@ int main(void)
   /*
    * 1. Start the connection
    */
-  TERMOUT( "> Connecting to tcp/%s/%s...\n\n", SERVER_NAME, SERVER_PORT );
+  TERMOUT( "> Connecting to tcp/%s/%d...\n\n", SERVER_NAME, SERVER_PORT );
 
   if( ( ret = mbedtls_net_connect( &server_fd, (uint8_t *)SERVER_NAME,
-                                       RemotePORT, WIFI_TCP_PROTOCOL) ) != 0 )
+		  	  	  	  	  	  SERVER_PORT, WIFI_TCP_PROTOCOL) ) != 0 )
   {
 	  TERMOUT( " failed\n  ! mbedtls_net_connect returned %d\n", ret );
   }
@@ -323,7 +406,8 @@ int main(void)
       TERMOUT( " failed\n  ! mbedtls_ssl_setup returned %d\n", ret );
   }
 
-  if( ( ret = mbedtls_ssl_set_hostname( &ssl, "localhost" ) ) != 0 )
+  if( ( ret = mbedtls_ssl_set_hostname( &ssl, SERVER_NAME ) ) != 0 )
+  //if( ( ret = mbedtls_ssl_set_hostname( &ssl, "localhost" ) ) != 0 )
   //if( ( ret = mbedtls_ssl_set_hostname( &ssl, "PolarSSL Test CA" ) ) != 0 )
   {
       TERMOUT( " failed\n  ! mbedtls_ssl_set_hostname returned %d\n", ret );
@@ -369,10 +453,9 @@ int main(void)
 	  TERMOUT( " ok\n" );
 
   /*
-   * 3. Write the GET request
+   * 3. Write to server
    */
-  TERMOUT( "> Write to server:" );
-  fflush( stdout );
+  /*TERMOUT( "> Write to server:" );
 
   len = sprintf( (char *) buf, "prova" );
 
@@ -385,7 +468,61 @@ int main(void)
   }
 
   len = ret;
-  mbedtls_printf( " %d bytes written\n\n%s", len, (char *) buf );
+  TERMOUT( " %d bytes written\n\n%s", len, (char *) buf );*/
+
+  /*
+   * 3. Read from server
+   */
+  /*TERMOUT( "  < Read from server:" );
+
+  len = sizeof( buf ) - 1;
+  memset( buf, 0, sizeof( buf ) );
+  ret = mbedtls_ssl_read( &ssl, buf,(size_t)len );
+
+  if( ret < 0 )
+  {
+	  TERMOUT( "failed\n  ! mbedtls_ssl_read returned %d\n\n", ret );
+  }
+
+  if( ret == 0 )
+  {
+	  TERMOUT( "\n\nEOF\n\n" );
+  }
+
+  len = ret;
+  TERMOUT( " %d bytes read\n\n%s", len, (char *) buf );*/
+
+  Network new_net;
+  MQTTClient c;
+  MQTTPacket_connectData options = MQTTPacket_connectData_initializer;
+  uint8_t writebuf[1000];
+  uint8_t readbuf[1000];
+
+  NewNetwork(&new_net);
+  MQTTClientInit(&c, &new_net, WIFI_WRITE_TIMEOUT, writebuf, 1000, readbuf, 1000);
+
+  /*options.willFlag = 0;
+  options.MQTTVersion = 3;
+  options.clientID.cstring = "pc";
+  options.username.cstring = "";
+  options.password.cstring = "";
+  options.keepAliveInterval = 10;
+  options.cleansession = 1;
+  options.will.message.cstring = "message";
+  options.will.qos = 1;
+  options.will.retained = 0;
+  options.will.topicName.cstring = "topic";*/
+
+  TERMOUT("> Connecting to MQTT Broker at %s:%d\n",SERVER_NAME,SERVER_PORT);
+  ret = MQTTConnect(&c, &options);
+  if (ret == 0)
+  {
+	  TERMOUT("> Connection established with the MQTT broker\n");
+  }
+  else
+  {
+	  TERMOUT("> Unable to connect with the MQTT broker\n");
+  }
 
   mbedtls_x509_crt_free( &cacert );
   mbedtls_ssl_free( &ssl );

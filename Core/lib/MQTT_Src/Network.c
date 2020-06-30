@@ -15,23 +15,15 @@
  *******************************************************************************/
 
 #include "Network.h"
+extern mbedtls_ssl_context ssl;
 
 uint16_t nlen;
 
 int net_read(Network* n, unsigned char* buffer, int len, int timeout_ms) {
 
 	int ret;
-	uint16_t receivedlen;
-
-	ret = WIFI_ReceiveData(n->my_socket, buffer, (uint16_t)len, &receivedlen, timeout_ms);
-	if (ret == WIFI_STATUS_OK)
-	{
-		ret = (int) receivedlen;
-	}
-	else
-	{
-		ret = -1;
-	}
+	//ret = mbedtls_net_recv(0, buffer,(size_t)len,(uint32_t)timeout_ms);
+	ret = mbedtls_ssl_read(&ssl, buffer,(size_t)len);
 	return ret;
 }
 
@@ -39,17 +31,7 @@ int net_read(Network* n, unsigned char* buffer, int len, int timeout_ms) {
 int net_write(Network* n, unsigned char* buffer, int len, int timeout_ms) {
 
 	int ret;
-	uint16_t wrotelen;
-
-	ret = WIFI_SendData(n->my_socket, buffer, len, &wrotelen, timeout_ms);
-	if (ret == WIFI_STATUS_OK)
-	{
-		ret = (int) wrotelen;
-	}
-	else
-	{
-		ret = -1;
-	}
+	ret = mbedtls_ssl_write(&ssl, buffer,(size_t)len);
 	return ret;
 }
 

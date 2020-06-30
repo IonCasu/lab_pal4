@@ -491,13 +491,31 @@ static void mbedtls_free_resource(net_socket_t *sock)
 
 int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t timeout) {
 
-	int ret;
+	int ret = 0;
+	uint16_t c = 0;
 	uint16_t receivedlen;
 
-	ret = WIFI_ReceiveData(0, buffer, (uint16_t)len, &receivedlen, timeout);
+	if (len > ES_WIFI_PAYLOAD_SIZE)
+	{
+		do
+		{
+			if (c+ES_WIFI_PAYLOAD_SIZE>len)
+				ret = WIFI_ReceiveData(0, buffer+c, (uint16_t)(len-c), &receivedlen, timeout);
+			else
+				ret = WIFI_ReceiveData(0, buffer+c, ES_WIFI_PAYLOAD_SIZE, &receivedlen, timeout);
+			c = c + receivedlen;
+			receivedlen = 0;
+		} while (len>c && ret==0);
+	}
+	else
+	{
+		ret = WIFI_ReceiveData(0, buffer, (uint16_t)len, &receivedlen, timeout);
+		c = receivedlen;
+	}
+
 	if (ret == WIFI_STATUS_OK)
 	{
-		ret = (int) receivedlen;
+		ret = (int) c;
 	}
 	else
 	{
@@ -551,15 +569,31 @@ int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t time
 
 int mbedtls_net_send(void *ctx,const unsigned char *buffer, size_t len) {
 
-	int ret;
+	int ret = 0;
+	uint16_t c = 0;
 	uint16_t wrotelen;
 	uint32_t timeout = 0;
 
-	ret = WIFI_SendData(0, buffer, (uint16_t)len, &wrotelen, timeout);
-
+	if (len > ES_WIFI_PAYLOAD_SIZE)
+	{
+		do
+		{
+			if (c+ES_WIFI_PAYLOAD_SIZE>len)
+				ret = WIFI_SendData(0, buffer+c, (uint16_t)(len-c), &wrotelen, timeout);
+			else
+				ret = WIFI_SendData(0, buffer+c, ES_WIFI_PAYLOAD_SIZE, &wrotelen, timeout);
+			c = c + wrotelen;
+			wrotelen = 0;
+		} while (len>c && ret==0);
+	}
+	else
+	{
+		ret = WIFI_SendData(0, buffer, (uint16_t)len, &wrotelen, timeout);
+		c = wrotelen;
+	}
 	if (ret == WIFI_STATUS_OK)
 	{
-		ret = (int) wrotelen;
+		ret = (int) c;
 	}
 	else
 	{

@@ -51,7 +51,48 @@ Core/lib/MQTT_Src/MQTTClient.o: ../Core/lib/MQTT_Src/MQTTClient.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/timing.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_core.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_wifi.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_address.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_class_extension.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_cellular.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_connect.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf_template.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_errors.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_custom.h \
+ /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h
 
 /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTClient.h:
 
@@ -158,3 +199,85 @@ Core/lib/MQTT_Src/MQTTClient.o: ../Core/lib/MQTT_Src/MQTTClient.c \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/timing.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_core.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_wifi.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_address.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_class_extension.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_cellular.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_connect.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf_template.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_errors.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_custom.h:
+
+/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h:

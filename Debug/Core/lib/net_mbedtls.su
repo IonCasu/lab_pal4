@@ -8,4 +8,4 @@ net_mbedtls.c:374:5:net_mbedtls_sock_send	32	static
 net_mbedtls.c:394:5:net_mbedtls_stop	24	static
 net_mbedtls.c:413:13:mbedtls_free_resource	24	static
 net_mbedtls.c:492:5:mbedtls_net_recv	40	static
-net_mbedtls.c:552:5:mbedtls_net_send	48	static
+net_mbedtls.c:570:5:mbedtls_net_send	48	static

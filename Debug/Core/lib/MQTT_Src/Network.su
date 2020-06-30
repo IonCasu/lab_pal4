@@ -1,4 +1,4 @@
-Network.c:21:5:net_read	40	static
-Network.c:39:5:net_write	40	static
-Network.c:62:6:NewNetwork	16	static
-Network.c:128:5:ConnectNetwork	64	static
+Network.c:22:5:net_read	32	static
+Network.c:31:5:net_write	32	static
+Network.c:44:6:NewNetwork	16	static
+Network.c:110:5:ConnectNetwork	64	static
