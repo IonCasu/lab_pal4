@@ -16,8 +16,8 @@
 #include "wifi.h"
 #include "net_mbedtls.h"
 
-#define SSID     "Rete-Fastweb"
-#define PASSWORD "s1E2t3T4e5?6"
+#define SSID     "BATCAVERNA"
+#define PASSWORD "batciaone01"
 #define CONNECTION_TRIAL_MAX          3
 #define LED2 						  0
 

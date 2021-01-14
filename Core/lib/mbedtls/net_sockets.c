@@ -673,15 +673,20 @@ void mbedtls_net_free( mbedtls_net_context *ctx )
 #include "net_sockets.h"
 #include "Network.h"
 
+void mbedtls_net_init( mbedtls_net_context *ctx )
+{
+  ctx->fd = -1;
+}
+
 int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
-                         int port, int proto )
+                         int port, int proto)
 {
 	uint8_t  MAC_Addr[6];
 	uint8_t  IP_Addr[4];
 	uint8_t  server_addr[4];
 	uint8_t  Trials = 4;
 
-	TERMOUT("****** WIFI Module in TCP Client mode demonstration ****** \n\n");
+	TERMOUT("> WIFI Module in TCP Client mode.\n\n");
 
 	if(WIFI_Init() ==  WIFI_STATUS_OK)
 	{
@@ -712,15 +717,14 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
 	               IP_Addr[2],
 	               IP_Addr[3]);
 
-		    if(WIFI_GetHostAddress((const char *)host, server_addr) == WIFI_STATUS_OK)
-		    {
-		    	TERMOUT("> Host address resolved\n");
-		    }
-		    else
-		    {
-		    	TERMOUT("> ERROR : CANNOT get host address\n");
-		    }
-
+	        if(WIFI_GetHostAddress((const char*)host, server_addr) == WIFI_STATUS_OK)
+			{
+				TERMOUT("> Host address resolved\n");
+			}
+			else
+			{
+				TERMOUT("> ERROR : CANNOT get host address\n");
+			}
 
 	        TERMOUT("> Trying to connect to Server: %d.%d.%d.%d:%d ...\n",
 	        		server_addr[0],
@@ -741,26 +745,22 @@ int mbedtls_net_connect( mbedtls_net_context *ctx, uint8_t* host,
 	        if(ctx->fd == -1)
 	        {
 	          TERMOUT("> ERROR : Cannot open Connection\n");
-	          //BSP_LED_On(LED2);
 	        }
 
 	      }
 	      else
 	      {
 	        TERMOUT("> ERROR : es-wifi module CANNOT get IP address\n");
-	        //BSP_LED_On(LED2);
 	      }
 	    }
 	    else
 	    {
 	      TERMOUT("> ERROR : es-wifi module NOT connected\n");
-	      //BSP_LED_On(LED2);
 	    }
 	}
 	else
 	{
 		TERMOUT("> ERROR : WIFI Module cannot be initialized.\n");
-	    //BSP_LED_On(LED2);
 	}
 return 0;
 }

@@ -15,6 +15,14 @@
   *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
+  *
+  * Il codice qui scritto effettua le seguenti operazioni:
+  *  - Connessione alla rete Wi-Fi
+  *  - Creazione di una connessione criptata TLS
+  *  - Creazione di una connessione MQTT
+  *  - Sottoscrizione a due diversi topic
+  *  - Publish su due diversi topic
+  *  - Scrittura a terminale di avvenuta ricezione di un messaggio inviato dal broker
   */
 /* USER CODE END Header */
 
@@ -44,16 +52,44 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TERMINAL_USE
-#define DEBUG_LEVEL 2
 
-/* Update SSID and PASSWORD with own Access point settings */
+/* DEBUG defines */
+
+/*
+ * Le seguenti define servono, rispettivamente, per abilitare l'uso dell'output sulla console di debug e
+ * per cambiare il livello di debug della libreria TLS (i valori vanno da 1 a 5)
+ */
+
+#define TERMINAL_USE
+#define DEBUG_LEVEL 1
+
+/* TLS defines
+ *
+ * Qui vengono dichiarati indirizzo e porta di un paio di server, quello di Modena utilizzato nel progetto
+ * e quello di test di mosquitto, utile per provare la connessione. La porta è sempre la stessa.
+ * */
+
+//#define SERVER_NAME "test.mosquitto.org"
+#define SERVER_NAME "94.177.167.141"
 #define SERVER_PORT 8883
-//#define SERVER_NAME "192.168.1.129"
-#define SERVER_NAME "test.mosquitto.org"
+//#define HOSTNAME "test.mosquitto.org"
+//#define HOSTNAME "94.177.167.141"
+
+/* MQTT defines
+ *
+ * WIFI_WRITE_TIMEOUT - Millisecondi prima della caduta dell'errore a seguito di una write
+ * WIFI_READ_TIMEOUT - Millisecondi prima della caduta dell'errore a seguito di una read
+ * WRITE_BUF_SIZE - Dimensione del buffer di scrittura del pacchetto
+ * READ_BUF_SIZE - Dimensione del buffer di ricezione del pacchetto
+ */
 #define WIFI_WRITE_TIMEOUT 10000
 #define WIFI_READ_TIMEOUT  10000
+#define WRITE_BUF_SIZE	2000
+#define READ_BUF_SIZE	2000
 
+/*
+ * Collegamento tra la funzione TERMOUT e la printf per la visualizzazione su console di debug
+ */
 #if defined (TERMINAL_USE)
 #define TERMOUT(...)  printf(__VA_ARGS__)
 #else
@@ -69,13 +105,19 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
+
+/*
+ * Variabile usata per il Random Number Generator (RNG)
+ */
 RNG_HandleTypeDef hrng;
-uint32_t myRandomNum;
 
 #if defined (TERMINAL_USE)
 extern UART_HandleTypeDef hDiscoUart;
 #endif /* TERMINAL_USE */
 
+/*
+ * Variabili utilizzate dalla libreria TLS
+ */
 mbedtls_net_context server_fd;
 mbedtls_entropy_context entropy;
 mbedtls_ctr_drbg_context ctr_drbg;
@@ -83,158 +125,122 @@ mbedtls_ssl_context ssl;
 mbedtls_ssl_config conf;
 mbedtls_x509_crt cacert;
 
-//key-size: 2048
-/*const unsigned char certificate[] =
-		"-----BEGIN CERTIFICATE-----\r\n" 								 	   \
-		"MIIDQjCCAiqgAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRIwEAYDVQQDDAlsb2Nh\r\n" \
-		"bGhvc3QxFzAVBgNVBAoMDm15b3JnYW5pemF0aW9uMQswCQYDVQQGEwJOTDAeFw0y\r\n" \
-		"MDAxMDEwMDAwMDBaFw0yMTEyMzEyMzU5NTlaMDoxEjAQBgNVBAMMCWxvY2FsaG9z\r\n" \
-		"dDEXMBUGA1UECgwObXlvcmdhbml6YXRpb24xCzAJBgNVBAYTAk5MMIIBIjANBgkq\r\n" \
-		"hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5R/XfHLERFGsV/rlbLQ0qDZS9W8o7bQK\r\n" \
-		"T63kVgR4/4+9sWgOqDM4OIv4Y6m3LQ2oxqKAVFSQJ5m+KqA5c7oO464KkGCK3i/i\r\n" \
-		"fnl/5sraNsgxrSRSTOPboQ9KNW3BssBXyECAXTUuW43P0mxisXv7Oe+yVTIZaVEh\r\n" \
-		"3r7rIOLyxewWYDauST98apqhK+MRc+H8zGKkqy64mgcRK9xkaLalzudguaTS8gcc\r\n" \
-		"XP+l32n1THJEj6/Q1PoeK4tAgqDdngV/Z8nBniv9VCxG+pYukJ/6dB9u9LLPL0oI\r\n" \
-		"Lp8p0LI9SDKJqns8MfaTeUJ/ub/rY7E0WOneYs9UlUN524ziUwTGQwIDAQABo1Mw\r\n" \
-		"UTAPBgNVHRMECDAGAQH/AgEAMB0GA1UdDgQWBBTsiPRR8fzUM+X309HWu1+VOZkQ\r\n" \
-		"RTAfBgNVHSMEGDAWgBTsiPRR8fzUM+X309HWu1+VOZkQRTANBgkqhkiG9w0BAQsF\r\n" \
-		"AAOCAQEANUxAiSOR7Rpf5K0cG6n6eMmd37S3AiVmXYxEbz4ZOnTMzmxcVS8UbMLQ\r\n" \
-		"ZqI8rVuj4+P+cePOgnp/FqaD24OdJ1TME/T20476WKFDem6MwRkrcXzvoFFbaLKQ\r\n" \
-		"PhDi0TBWhS3Pep7+SpuhFowRDwzozCemzBkS30yMcXWVs1f92/IwRFWhScI8sT+M\r\n" \
-		"UQpXXeqL7BWkLTGI9EgldDfuEg9/Bet6OXahF3LnoM3I+NzCavc2LlJtA5sdafJW\r\n" \
-		"H7WhCfqQc8QClsOaJs1r9cn4QTYucoux4IaUeK1xLvLeELVMmtSAzfqeX0Yyu3MD\r\n" \
-		"/LWsuxQHsRyN4FFLpsMhrxHc+5OMeQ==\r\n" 								   \
-		"-----END CERTIFICATE-----\r\n";*/
 
-//key-size: 4096
-/*const unsigned char certificate[] =
-		"-----BEGIN CERTIFICATE-----\r\n" 									   \
-		"MIIFQjCCAyqgAwIBAgIBATANBgkqhkiG9w0BAQsFADA6MRIwEAYDVQQDDAlsb2Nh\r\n" \
-		"bGhvc3QxFzAVBgNVBAoMDm15b3JnYW5pemF0aW9uMQswCQYDVQQGEwJOTDAeFw0y\r\n" \
-		"MDAxMDEwMDAwMDBaFw0yMTEyMzEyMzU5NTlaMDoxEjAQBgNVBAMMCWxvY2FsaG9z\r\n" \
-		"dDEXMBUGA1UECgwObXlvcmdhbml6YXRpb24xCzAJBgNVBAYTAk5MMIICIjANBgkq\r\n" \
-		"hkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA10q5osqBTrQ7jfu5CIW6vvU9/NSdi9jU\r\n" \
-		"IcUjrxVJXPA0JeZHwgbIvmrT5Y9pxyHupBn02h8b7kcNmBWHsYBFDuk7Ji4jHCTM\r\n" \
-		"GGNRm+ZqMwZQErLUmomIjoOShbuoTAkjPu7cqKgw0Y/grjdtb7eA0Yd5Z4OncxWZ\r\n" \
-		"bCknlWk6SrYWMGiHIfAVxIUkzRT0rX+mXx0ktCNCBTxiJioZ0SUijltLAvvrVN8S\r\n" \
-		"FdPgWwIjt2RkXEmBuezvZX/NQPqfZ0f7va6qsAdRz3Qn6hTly+d/o2FM+TphOqIQ\r\n" \
-		"/myEYGKf6r6OGwWV+JOdsirT8abRTf8chhkG7OT8HR66J9mdxZxGqzrnEsP+si7O\r\n" \
-		"PXUh+pGEMZ5+qQICB6vg2UaTjIH0QphLKQPK5lXt0bb8t4QU8XnTZ38Gcvp4Vd5W\r\n" \
-		"JNfhtqYeGHAbvf+IhcIC1rUx9zNe9APluB0VrluXkEw0fOfB+AMgE0z7Q4mXBonf\r\n" \
-		"YpTTr5fVtRJ7f4PfzPnGeldPbVCuNSqGR3msf3JK03DkVzPyXkn/6ModMTEQOoOQ\r\n" \
-		"YlQQJbE6jG8w9R3BVH2Sip6G6y3k1P3AAr5gE45NipsItK1rP6FcDBDHLirNUVf/\r\n" \
-		"AeG+R7cHrx6BorfIwk2iRzY3W0BaQ7R35JnhbPPeyYgTDjMo4lIx3wLNXPhWroRB\r\n" \
-		"GrXblDWD5/UCAwEAAaNTMFEwDwYDVR0TBAgwBgEB/wIBADAdBgNVHQ4EFgQUGKv7\r\n" \
-		"j9T3VcPTeKs57vJeg3rtpTkwHwYDVR0jBBgwFoAUGKv7j9T3VcPTeKs57vJeg3rt\r\n" \
-		"pTkwDQYJKoZIhvcNAQELBQADggIBANON1pdhgElerFgV1WjP1rdDXrG/mtcFJCK9\r\n" \
-		"Z5R6UdkUKkDQkX0b7LT0Wnm9n2AsU2C8+Jw/jisN6tdEmldZcAwICZZ+vYmBg3Eo\r\n" \
-		"GPqBXfmAZTEYDmd6rg47JMWxUKBj9a4tsvJ13Cs4Agg+Eopg9HihRIdPvWy5puRK\r\n" \
-		"Y6MrrrrRINclKH+xyn5n3cEiJwUTeX9+08hpWrYuotAmFWE7GbQj+YVZP4c7NXSZ\r\n" \
-		"QcJKfYuGj132SvT9rVtxSfCoT93AiZ/5K5HIhNRCeEe57Mb6QyYtQEmIlPVZEebQ\r\n" \
-		"2knDB8N7o1X09iqD2A3IPQ2Vj7jwUdh8ulNYPGkmp8vWfHCI2mOjS12aLZRAxlu3\r\n" \
-		"RxOvMbSUDwC8WrzJtSXZ5/9IoZz+AHXS7olbQFilMYD+Hsme0H82GVZOJEZoo0gG\r\n" \
-		"PXGoKaqd+FmPGylbeF3n5h9DC6Ceh+9S5Rsq7YEud2oN3aNTjEhvHmo5pGNjwqdV\r\n" \
-		"c4THOZHn0/8k5toGck4b1TtwmoTy2iw57WFxGB5XloyM8a5o/dj46737sXUXwvHH\r\n" \
-		"3K0CrDx8OJuzsJaiWmcWd4QMfgeRECJobTCWBjsJ0Z8VAB4VnSBY2FH6L1j4VQQb\r\n" \
-		"DOmOtSKSSEKeIG4rNLfD0Zwbf2ZcfoNcnBuxDDwgkBqDRrdVucpMnHZShSnCfWj1\r\n" \
-		"rqfkhnKu\r\n" 														   \
-		"-----END CERTIFICATE-----\r\n";*/
+/*
+ * Certificati utilizzati per validare la connessione al server (Modena e Mosquitto)
+ */
 
-//key-size: 8192
-/*const unsigned char certificate[] =
-		"-----BEGIN CERTIFICATE-----\r\n" 									   \
-		"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\r\n" \
-		"6NKRISnwVctYoyWVzGPf/xmj6bfOOw==\r\n" 								   \
-		"-----END CERTIFICATE-----\r\n";*/
-
-
-//mosquitto broker
+//Modena
 const unsigned char certificate[] =
-		"-----BEGIN CERTIFICATE-----\r\n" 									   \
-		"MIIEAzCCAuugAwIBAgIUBY1hlCGvdj4NhBXkZ/uLUZNILAwwDQYJKoZIhvcNAQEL\r\n" \
-		"BQAwgZAxCzAJBgNVBAYTAkdCMRcwFQYDVQQIDA5Vbml0ZWQgS2luZ2RvbTEOMAwG\r\n" \
-		"A1UEBwwFRGVyYnkxEjAQBgNVBAoMCU1vc3F1aXR0bzELMAkGA1UECwwCQ0ExFjAU\r\n" \
-		"BgNVBAMMDW1vc3F1aXR0by5vcmcxHzAdBgkqhkiG9w0BCQEWEHJvZ2VyQGF0Y2hv\r\n" \
-		"by5vcmcwHhcNMjAwNjA5MTEwNjM5WhcNMzAwNjA3MTEwNjM5WjCBkDELMAkGA1UE\r\n" \
-		"BhMCR0IxFzAVBgNVBAgMDlVuaXRlZCBLaW5nZG9tMQ4wDAYDVQQHDAVEZXJieTES\r\n" \
-		"MBAGA1UECgwJTW9zcXVpdHRvMQswCQYDVQQLDAJDQTEWMBQGA1UEAwwNbW9zcXVp\r\n" \
-		"dHRvLm9yZzEfMB0GCSqGSIb3DQEJARYQcm9nZXJAYXRjaG9vLm9yZzCCASIwDQYJ\r\n" \
-		"KoZIhvcNAQEBBQADggEPADCCAQoCggEBAME0HKmIzfTOwkKLT3THHe+ObdizamPg\r\n" \
-		"UZmD64Tf3zJdNeYGYn4CEXbyP6fy3tWc8S2boW6dzrH8SdFf9uo320GJA9B7U1FW\r\n" \
-		"Te3xda/Lm3JFfaHjkWw7jBwcauQZjpGINHapHRlpiCZsquAthOgxW9SgDgYlGzEA\r\n" \
-		"s06pkEFiMw+qDfLo/sxFKB6vQlFekMeCymjLCbNwPJyqyhFmPWwio/PDMruBTzPH\r\n" \
-		"3cioBnrJWKXc3OjXdLGFJOfj7pP0j/dr2LH72eSvv3PQQFl90CZPFhrCUcRHSSxo\r\n" \
-		"E6yjGOdnz7f6PveLIB574kQORwt8ePn0yidrTC1ictikED3nHYhMUOUCAwEAAaNT\r\n" \
-		"MFEwHQYDVR0OBBYEFPVV6xBUFPiGKDyo5V3+Hbh4N9YSMB8GA1UdIwQYMBaAFPVV\r\n" \
-		"6xBUFPiGKDyo5V3+Hbh4N9YSMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL\r\n" \
-		"BQADggEBAGa9kS21N70ThM6/Hj9D7mbVxKLBjVWe2TPsGfbl3rEDfZ+OKRZ2j6AC\r\n" \
-		"6r7jb4TZO3dzF2p6dgbrlU71Y/4K0TdzIjRj3cQ3KSm41JvUQ0hZ/c04iGDg/xWf\r\n" \
-		"+pp58nfPAYwuerruPNWmlStWAXf0UTqRtg4hQDWBuUFDJTuWuuBvEXudz74eh/wK\r\n" \
-		"sMwfu1HFvjy5Z0iMDU8PUDepjVolOCue9ashlS4EB5IECdSR2TItnAIiIwimx839\r\n" \
-		"LdUdRudafMu5T5Xma182OC0/u/xRlEm+tvKGGmfFcN0piqVl8OrSPBgIlb+1IKJE\r\n" \
-		"m/XriWr/Cq4h/JfB7NTsezVslgkBaoU=\r\n" 								   \
+		"-----BEGIN CERTIFICATE-----\r\n"
+		"MIIEEzCCAvugAwIBAgIJAN0/f83JD+j9MA0GCSqGSIb3DQEBCwUAMIGfMQswCQYD\r\n" \
+		"VQQGEwJJVDELMAkGA1UECAwCTU8xDzANBgNVBAcMBk1vZGVuYTEZMBcGA1UECgwQ\r\n" \
+		"RGF0YVJpdmVyIFMuci5sLjEWMBQGA1UECwwNSVQgRGVwYXJ0bWVudDEaMBgGA1UE\r\n" \
+		"AwwRbXF0dC5kYXRhcml2ZXIuaXQxIzAhBgkqhkiG9w0BCQEWFGhvc3RpbmdAZGF0\r\n" \
+		"YXJpdmVyLml0MB4XDTIwMTAwODE1NDkxOVoXDTIxMTAwODE1NDkxOVowgZ8xCzAJ\r\n" \
+		"BgNVBAYTAklUMQswCQYDVQQIDAJNTzEPMA0GA1UEBwwGTW9kZW5hMRkwFwYDVQQK\r\n" \
+		"DBBEYXRhUml2ZXIgUy5yLmwuMRYwFAYDVQQLDA1JVCBEZXBhcnRtZW50MRowGAYD\r\n" \
+		"VQQDDBFtcXR0LmRhdGFyaXZlci5pdDEjMCEGCSqGSIb3DQEJARYUaG9zdGluZ0Bk\r\n" \
+		"YXRhcml2ZXIuaXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHvBcn\r\n" \
+		"zQmkQTbvIpw2zcePhA/+X5hG/hXONlpj3+7z/37hI8Q8pmPCoyqno2+L1BNWERlY\r\n" \
+		"VDUlcL+OwPaHrYRSbSmeRXGfeRp6qOa+wWKE3LtMCZN1D6z2OY3+smZ9Ob60A8/s\r\n" \
+		"KxdTigg88sWi48iTcInTSuEy2Ixh1zsC0TFD2Me/Vxyk3EsvDROiYHwf5K1Ur6SB\r\n" \
+		"jbj3Olmm7mXvrynjYfX+uzKELrkbjDpLfot7UGAEv8sf4P1tHz1WP0GZUlbw2gIC\r\n" \
+		"ILHR+Bdazku8GTuZNLUopRqWDDQHUTqB3j2ORO/VeGh4RdzvQxJ3bYpaa+3lOMMA\r\n" \
+		"isVd3xv5lePerm0PAgMBAAGjUDBOMB0GA1UdDgQWBBTz9ngRUjN8NyWmeWYQNO1l\r\n" \
+		"HNpd9zAfBgNVHSMEGDAWgBTz9ngRUjN8NyWmeWYQNO1lHNpd9zAMBgNVHRMEBTAD\r\n" \
+		"AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCiDc6HRzkVj+zcdz71nDDmcOthjDW3VPfg\r\n" \
+		"TbMS3y9F2TZ/+TbmqARUSWoWEVOFztNpZzn60Gb9WVZzsQicAk09+ADiYNVZCIlu\r\n" \
+		"/ASP1z+B3yBFK4B8HazkXA6QQw9UW5/9aWi8XQewDg2yB0GIW44Q/XIxlZVJrTLu\r\n" \
+		"J/Xjsdzx7UTNZ48wRqNwzmxnxenJCrWVZVFKPqqxBCfwJlD6rn77zN9CoCGPpNSX\r\n" \
+		"nPm+8SrAXL0TSelNM7VzypOvNVCQY5tjdeToaYStjgmhbB2Nu5CnFEk2bM5l716p\r\n" \
+		"VoHJzqoz+nFE662NpA+Lw9Q8IJtw/MkgqlNbtWMrA41StfvP6FXc\r\n" 			   \
 		"-----END CERTIFICATE-----\r\n";
+
+//Mosquitto
+const unsigned char mosquitto_certificate[] =
+		"-----BEGIN CERTIFICATE-----\r\n"
+		"MIIEAzCCAuugAwIBAgIUBY1hlCGvdj4NhBXkZ/uLUZNILAwwDQYJKoZIhvcNAQEL\r\n"
+		"BQAwgZAxCzAJBgNVBAYTAkdCMRcwFQYDVQQIDA5Vbml0ZWQgS2luZ2RvbTEOMAwG\r\n"
+		"A1UEBwwFRGVyYnkxEjAQBgNVBAoMCU1vc3F1aXR0bzELMAkGA1UECwwCQ0ExFjAU\r\n"
+		"BgNVBAMMDW1vc3F1aXR0by5vcmcxHzAdBgkqhkiG9w0BCQEWEHJvZ2VyQGF0Y2hv\r\n"
+		"by5vcmcwHhcNMjAwNjA5MTEwNjM5WhcNMzAwNjA3MTEwNjM5WjCBkDELMAkGA1UE\r\n"
+		"BhMCR0IxFzAVBgNVBAgMDlVuaXRlZCBLaW5nZG9tMQ4wDAYDVQQHDAVEZXJieTES\r\n"
+		"MBAGA1UECgwJTW9zcXVpdHRvMQswCQYDVQQLDAJDQTEWMBQGA1UEAwwNbW9zcXVp\r\n"
+		"dHRvLm9yZzEfMB0GCSqGSIb3DQEJARYQcm9nZXJAYXRjaG9vLm9yZzCCASIwDQYJ\r\n"
+		"KoZIhvcNAQEBBQADggEPADCCAQoCggEBAME0HKmIzfTOwkKLT3THHe+ObdizamPg\r\n"
+		"UZmD64Tf3zJdNeYGYn4CEXbyP6fy3tWc8S2boW6dzrH8SdFf9uo320GJA9B7U1FW\r\n"
+		"Te3xda/Lm3JFfaHjkWw7jBwcauQZjpGINHapHRlpiCZsquAthOgxW9SgDgYlGzEA\r\n"
+		"s06pkEFiMw+qDfLo/sxFKB6vQlFekMeCymjLCbNwPJyqyhFmPWwio/PDMruBTzPH\r\n"
+		"3cioBnrJWKXc3OjXdLGFJOfj7pP0j/dr2LH72eSvv3PQQFl90CZPFhrCUcRHSSxo\r\n"
+		"E6yjGOdnz7f6PveLIB574kQORwt8ePn0yidrTC1ictikED3nHYhMUOUCAwEAAaNT\r\n"
+		"MFEwHQYDVR0OBBYEFPVV6xBUFPiGKDyo5V3+Hbh4N9YSMB8GA1UdIwQYMBaAFPVV\r\n"
+		"6xBUFPiGKDyo5V3+Hbh4N9YSMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL\r\n"
+		"BQADggEBAGa9kS21N70ThM6/Hj9D7mbVxKLBjVWe2TPsGfbl3rEDfZ+OKRZ2j6AC\r\n"
+		"6r7jb4TZO3dzF2p6dgbrlU71Y/4K0TdzIjRj3cQ3KSm41JvUQ0hZ/c04iGDg/xWf\r\n"
+		"+pp58nfPAYwuerruPNWmlStWAXf0UTqRtg4hQDWBuUFDJTuWuuBvEXudz74eh/wK\r\n"
+		"sMwfu1HFvjy5Z0iMDU8PUDepjVolOCue9ashlS4EB5IECdSR2TItnAIiIwimx839\r\n"
+		"LdUdRudafMu5T5Xma182OC0/u/xRlEm+tvKGGmfFcN0piqVl8OrSPBgIlb+1IKJE\r\n"
+		"m/XriWr/Cq4h/JfB7NTsezVslgkBaoU=\r\n"
+		"-----END CERTIFICATE-----\r\n";
+
+/*
+ * Variabili utilizzate per la ricezione e la subscribe a topic MQTT
+ */
+static MQTTMessage pubmsg, timemsg;
+MQTTSubackData subData, subTimeData;
+
+/*
+ * Variabile che identifica l'SPI3
+ * Dichiarata in un altro file, quindi definita come extern
+ */
+extern  SPI_HandleTypeDef hspi;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
-extern  SPI_HandleTypeDef hspi;
 
+/* USER CODE BEGIN PFP */
+/*
+ * Funzioni che permettono la ricezione di due tipi di messaggi su due diversi topic, inviati dal server di Modena.
+ * messageArrived - Restituisce esattamente ciò che scriviamo al server
+ * messageTimeArrived - Restituisce l'orario
+ */
+void messageArrived(MessageData* md);
+void messageTimeArrived(MessageData* md);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+/*
+ * Variabili utilizzate al solo scopo di debug
+ * cont - Numero di messaggi arrivati (non tiene conto dei messaggi di orario)
+ * timeMessaggio - Orario ricevuto dal server
+ */
+int cont = 0;
+char* timeMessaggio;
+
+void messageArrived(MessageData* md)
+{
+  MQTTMessage* m = md->message;
+  TERMOUT("> Good message lengths, payloadlen was %d\n", m->payloadlen);
+  cont = cont + 1;
+  //TERMOUT("> Payload was %s\n", (char*)m->payload);
+}
+
+void messageTimeArrived(MessageData* md)
+{
+  MQTTMessage* m = md->message;
+  TERMOUT("> Good time message, payloadlen was %d\n", m->payloadlen);
+  timeMessaggio = m->payload;
+  //TERMOUT("> Time payload was %s\n", (char*)m->payload);
+}
+
+/*
+ * Funzione usata per il debug della TLS
+ */
 static void my_debug(void *ctx, int level, const char *file, int line,
                      const char *str)
 {
@@ -290,6 +296,10 @@ int main(void)
   MX_USB_OTG_FS_PCD_Init();
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
+
+  /*
+   * Definizione parametri UART per scrittura a terminale
+   */
 #if defined (TERMINAL_USE)
   /* Initialize all configured peripherals */
   hDiscoUart.Instance = DISCOVERY_COM1;
@@ -307,14 +317,14 @@ int main(void)
 #endif /* TERMINAL_USE */
 
 
-  /*int len;
-  unsigned char buf[1024];*/
-
   int ret;
   uint32_t flags;
   const char *pers = "ssl_client1";
-  uint32_t read_timeout=10000;
+  uint32_t read_timeout = WIFI_READ_TIMEOUT;
 
+  /*
+   * Funzioni di inizializzazione TLS
+   */
   mbedtls_net_init( &server_fd );
   mbedtls_ssl_init( &ssl );
   mbedtls_ssl_config_init( &conf );
@@ -322,11 +332,16 @@ int main(void)
   mbedtls_ctr_drbg_init( &ctr_drbg );
   mbedtls_entropy_init( &entropy );
 
-	#if DEBUG_LEVEL > 0
-			mbedtls_ssl_conf_dbg(&conf, my_debug, NULL);
-			mbedtls_debug_set_threshold(DEBUG_LEVEL);
-	#endif
+  #if DEBUG_LEVEL > 0
+  	  mbedtls_ssl_conf_dbg(&conf, my_debug, NULL);
+  	  mbedtls_debug_set_threshold(DEBUG_LEVEL);
+  #endif
 
+  /*
+   * Aggiunta della sorgente di entropia.
+   * La sorgente di entropia serve per ottenere un numero casuale che permetta la generazione di una
+   * chiave sicura nel criptaggio TLS
+   */
   TERMOUT( "> Adding a new entropy source..." );
   ret = mbedtls_entropy_add_source(&entropy,mbedtls_rng_poll_cb,&hrng,32,MBEDTLS_ENTROPY_SOURCE_STRONG);
   if (ret != 0)
@@ -355,9 +370,8 @@ int main(void)
    */
   TERMOUT( "> Loading the CA root certificate ..." );
 
-  /*ret = mbedtls_x509_crt_parse( &cacert, (const unsigned char *) mbedtls_test_cas_pem,
-						mbedtls_test_cas_pem_len );*/
   ret = mbedtls_x509_crt_parse( &cacert, certificate, sizeof( certificate ) );
+  //ret = mbedtls_x509_crt_parse( &cacert, mosquitto_certificate, sizeof( mosquitto_certificate ) );
 
   if( ret < 0 )
   {
@@ -369,10 +383,10 @@ int main(void)
   /*
    * 1. Start the connection
    */
-  TERMOUT( "> Connecting to tcp/%s/%d...\n\n", SERVER_NAME, SERVER_PORT );
+  TERMOUT( "> Connecting to tcp %s:%d...\n\n",SERVER_NAME,SERVER_PORT);
 
-  if( ( ret = mbedtls_net_connect( &server_fd, (uint8_t *)SERVER_NAME,
-		  	  	  	  	  	  SERVER_PORT, WIFI_TCP_PROTOCOL) ) != 0 )
+  if( ( ret = mbedtls_net_connect( &server_fd, (uint8_t*)SERVER_NAME, SERVER_PORT,
+		  WIFI_TCP_PROTOCOL) ) != 0)
   {
 	  TERMOUT( " failed\n  ! mbedtls_net_connect returned %d\n", ret );
   }
@@ -394,25 +408,30 @@ int main(void)
 
   /* OPTIONAL is not optimal for security,
    * but makes interop easier in this simplified example */
+  /*
+   * al posto di MBEDTLS_SSL_VERIFY_REQUIRED si può inserire MBEDTLS_SSL_VERIFY_OPTIONAL
+   * per evitare il controllo del certificato. E' utile in fase di prova, non è accettabile
+   * a codice completo
+   */
   mbedtls_ssl_conf_authmode( &conf, MBEDTLS_SSL_VERIFY_REQUIRED);
   mbedtls_ssl_conf_ca_chain( &conf, &cacert, NULL );
 
   mbedtls_ssl_conf_read_timeout( &conf, read_timeout );
-
   mbedtls_ssl_conf_rng( &conf, mbedtls_ctr_drbg_random, &ctr_drbg );
-
   if( ( ret = mbedtls_ssl_setup( &ssl, &conf ) ) != 0 )
   {
       TERMOUT( " failed\n  ! mbedtls_ssl_setup returned %d\n", ret );
   }
 
   if( ( ret = mbedtls_ssl_set_hostname( &ssl, SERVER_NAME ) ) != 0 )
-  //if( ( ret = mbedtls_ssl_set_hostname( &ssl, "localhost" ) ) != 0 )
-  //if( ( ret = mbedtls_ssl_set_hostname( &ssl, "PolarSSL Test CA" ) ) != 0 )
   {
       TERMOUT( " failed\n  ! mbedtls_ssl_set_hostname returned %d\n", ret );
   }
 
+  /*
+   * Funzione che collega le funzioni di ricezione ed invio (mbedtls_net_recv, mbedtls_net_send)
+   * alla libreria TLS
+   */
   mbedtls_ssl_set_bio(&ssl, &server_fd, mbedtls_net_send, NULL, mbedtls_net_recv);
 
   /*
@@ -422,7 +441,6 @@ int main(void)
 
   while( ( ret = mbedtls_ssl_handshake( &ssl ) ) != 0 )
   {
-     // if( ret != MBEDTLS_ERR_SSL_WANT_READ && ret != MBEDTLS_ERR_SSL_WANT_WRITE )
       if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
           ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
           ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
@@ -453,65 +471,47 @@ int main(void)
 	  TERMOUT( " ok\n" );
 
   /*
-   * 3. Write to server
+   * Inizializzazione parametri MQTT
    */
-  /*TERMOUT( "> Write to server:" );
-
-  len = sprintf( (char *) buf, "prova" );
-
-  while( ( ret = mbedtls_ssl_write( &ssl, buf, len ) ) <= 0 )
-  {
-      if( ret != MBEDTLS_ERR_SSL_WANT_READ && ret != MBEDTLS_ERR_SSL_WANT_WRITE )
-      {
-    	  TERMOUT( " failed\n  ! mbedtls_ssl_write returned %d\n\n", ret );
-      }
-  }
-
-  len = ret;
-  TERMOUT( " %d bytes written\n\n%s", len, (char *) buf );*/
-
-  /*
-   * 3. Read from server
-   */
-  /*TERMOUT( "  < Read from server:" );
-
-  len = sizeof( buf ) - 1;
-  memset( buf, 0, sizeof( buf ) );
-  ret = mbedtls_ssl_read( &ssl, buf,(size_t)len );
-
-  if( ret < 0 )
-  {
-	  TERMOUT( "failed\n  ! mbedtls_ssl_read returned %d\n\n", ret );
-  }
-
-  if( ret == 0 )
-  {
-	  TERMOUT( "\n\nEOF\n\n" );
-  }
-
-  len = ret;
-  TERMOUT( " %d bytes read\n\n%s", len, (char *) buf );*/
-
   Network new_net;
   MQTTClient c;
   MQTTPacket_connectData options = MQTTPacket_connectData_initializer;
-  uint8_t writebuf[1000];
-  uint8_t readbuf[1000];
 
-  NewNetwork(&new_net);
-  MQTTClientInit(&c, &new_net, WIFI_WRITE_TIMEOUT, writebuf, 1000, readbuf, 1000);
-
-  /*options.willFlag = 0;
+  options.willFlag = 0;
   options.MQTTVersion = 3;
-  options.clientID.cstring = "pc";
-  options.username.cstring = "";
-  options.password.cstring = "";
-  options.keepAliveInterval = 10;
+  options.clientID.cstring = "OSO_1";
+  options.username.cstring = "uniprpark";
+  options.password.cstring = "uniprpass";
+  options.keepAliveInterval = 60;
   options.cleansession = 1;
-  options.will.message.cstring = "message";
+  /*options.will.message.cstring = "message";
   options.will.qos = 1;
   options.will.retained = 0;
   options.will.topicName.cstring = "topic";*/
+
+  uint8_t writebuf[WRITE_BUF_SIZE];
+  uint8_t readbuf[READ_BUF_SIZE];
+
+  /*
+   * subsqos - Quality Of Service della subscribe
+   * qos - Quality Of Service della trasmissione
+   * test_topic - Topic a cui sottoscrivere per il server Modenese
+   */
+  int subsqos = 2;
+  char* test_topic = "PARK_MO002/OSO9CB6D0BE4F75/attrs";
+  int qos = 2;
+
+  /*
+   * Variabili usate per controllare a quantità di messaggi inviati
+   */
+  uint8_t iterations = 1;
+  uint8_t stop = 0;
+
+  /*
+   * Inizializzazione connessione MQTT e connessione al broker
+   */
+  NewNetwork(&new_net);
+  MQTTClientInit(&c, &new_net, WIFI_WRITE_TIMEOUT, writebuf, WRITE_BUF_SIZE, readbuf, READ_BUF_SIZE);
 
   TERMOUT("> Connecting to MQTT Broker at %s:%d\n",SERVER_NAME,SERVER_PORT);
   ret = MQTTConnect(&c, &options);
@@ -523,21 +523,125 @@ int main(void)
   {
 	  TERMOUT("> Unable to connect with the MQTT broker\n");
   }
+  /*
+   * SOTTOSCRIZIONE AL TOPIC TIME
+   */
+  char* time_OSO_topic = "get_time/OSO_1";
+  char* time_server_topic = "get_time/server";
+  ret = MQTTSubscribeWithResults(&c, time_OSO_topic, subsqos, messageTimeArrived, &subTimeData);
+  if (ret == 0)
+  {
+	  TERMOUT("> Subscribe to topic: %s correct\n", time_OSO_topic);
+  }
+  else
+  {
+	  TERMOUT("> Subscribe to topic: %s not correct\n", time_OSO_topic);
+  }
 
-  mbedtls_x509_crt_free( &cacert );
-  mbedtls_ssl_free( &ssl );
-  mbedtls_ssl_config_free( &conf );
-  mbedtls_ctr_drbg_free( &ctr_drbg );
-  mbedtls_entropy_free( &entropy );
+  /*
+   * SOTTOSCRIZIONE AL TOPIC IN CUI INVII I MESSAGGI
+   */
+  ret = MQTTSubscribeWithResults(&c, test_topic, subsqos, messageArrived, &subData);
+  if (ret == 0)
+  {
+	  TERMOUT("> Subscribe to topic: %s correct\n", test_topic);
+  }
+  else
+  {
+	  TERMOUT("> Subscribe to topic: %s not correct\n", test_topic);
+  }
 
+  /*
+   * Messaggio da inviare al server contenente i dati che vogliamo inviare
+   */
+  memset(&pubmsg, '\0', sizeof(pubmsg));
+  pubmsg.payload = "{\"items\": [{\"measure\": \"test\",\"measure_unit\": \"none\",\"data_type\": \"test_data\",\"data_source\": \"PARK_MO001_OSO012345ABCDEF\",\"values\": [{\"value\": 1,\"data_start_time\": \"202011051100\",\"data_end_time\": \"202011051101\"},{\"value\": 2,\"data_start_time\": \"202011051101\",\"data_end_time\": \"202011051102\"},{\"value\": 3,\"data_start_time\": \"202011051102\",\"data_end_time\": \"202011051103\"},{\"value\": 4,\"data_start_time\": \"202011051103\",\"data_end_time\": \"202011051104\"},{\"value\": 5,\"data_start_time\": \"202011051104\",\"data_end_time\": \"202011051105\"}]}]}";
+  pubmsg.payloadlen = strlen(pubmsg.payload);
+  pubmsg.qos = qos;
+  pubmsg.retained = 0;
+  pubmsg.dup = 0;
+
+  /*
+   * Messaggio contenente la richiesta dell'orario al server
+   */
+  memset(&timemsg, '\0', sizeof(timemsg));
+  timemsg.payload = "{'caller':'OSO_1'}";
+  timemsg.payloadlen = strlen(timemsg.payload);
+  timemsg.qos = qos;
+  timemsg.retained = 0;
+  timemsg.dup = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  /*
+   * Il programma invia un paio di messaggi normali al server, dopodiché fa una richiesta di orario.
+   * La sequenza precedente si ripete 2 volte, dopodiché il programma termina.
+   */
   while (1)
   {
     /* USER CODE END WHILE */
+
+	  if (iterations <= 2)
+	  {
+		  TERMOUT("> Message %d at QoS %d\n", iterations, qos);
+		  ret = MQTTPublish(&c, test_topic, &pubmsg);
+		  if (ret == 0)
+		  {
+			  TERMOUT("> Correct Publish to the topic: %s\n", test_topic);
+		  }
+		  else
+		  {
+			  TERMOUT("> Unable to Publish to the topic: %s\n", test_topic);
+		  }
+		  iterations++;
+		  HAL_Delay(1000);
+	  }
+	  else
+	  {
+		  if (stop==0)
+		  {
+			  iterations = 1;
+			  stop = 1;
+
+			  TERMOUT("> Time request \n");
+			  ret = MQTTPublish(&c, time_server_topic, &timemsg);
+			  if (ret == 0)
+			  {
+				  TERMOUT("> Correct Publish to the topic: %s\n", time_server_topic);
+			  }
+			  else
+			  {
+				  TERMOUT("> Unable to Publish to the topic: %s\n", time_server_topic);
+			  }
+			  HAL_Delay(1000);
+		  }
+		  else
+		  {
+			  TERMOUT("> Last time request \n");
+			  ret = MQTTPublish(&c, time_server_topic, &timemsg);
+			  if (ret == 0)
+			  {
+				  TERMOUT("> Correct Publish to the topic: %s\n", time_server_topic);
+			  }
+			  else
+			  {
+				  TERMOUT("> Unable to Publish to the topic: %s\n", time_server_topic);
+			  }
+
+			  HAL_Delay(1000);
+
+			  break;
+		  }
+	  }
+
     /* USER CODE BEGIN 3 */
+  }
+  while(1)
+  {
+	  //MQTTYield(&c, 1000);
+	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
@@ -651,11 +755,6 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */
-}
-
-void mbedtls_net_init( mbedtls_net_context *ctx )
-{
-  ctx->fd = -1;
 }
 
 #ifdef  USE_FULL_ASSERT

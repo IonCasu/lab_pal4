@@ -1,29 +1,29 @@
 Core/lib/MQTT_Src/MQTTConnectServer.o: \
  ../Core/lib/MQTT_Src/MQTTConnectServer.c \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTConnect.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPublish.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTSubscribe.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTUnsubscribe.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTFormat.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTConnect.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPublish.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTSubscribe.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTUnsubscribe.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTFormat.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTConnect.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTConnect.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPublish.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPublish.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTSubscribe.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTSubscribe.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTUnsubscribe.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTUnsubscribe.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTFormat.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTFormat.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h:

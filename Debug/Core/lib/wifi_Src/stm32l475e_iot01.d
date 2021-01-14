@@ -1,6 +1,6 @@
 Core/lib/wifi_Src/stm32l475e_iot01.o: \
  ../Core/lib/wifi_Src/stm32l475e_iot01.c \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/stm32l475e_iot01.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/stm32l475e_iot01.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -40,7 +40,7 @@ Core/lib/wifi_Src/stm32l475e_iot01.o: \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/stm32l475e_iot01.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/stm32l475e_iot01.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 

@@ -1,8 +1,8 @@
 Core/lib/wifi_Src/wifi.o: ../Core/lib/wifi_Src/wifi.c \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/wifi.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_conf.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_io.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/wifi.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_conf.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_io.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -42,13 +42,13 @@ Core/lib/wifi_Src/wifi.o: ../Core/lib/wifi_Src/wifi.c \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/wifi.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/wifi.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_conf.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_conf.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_io.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_io.h:
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 

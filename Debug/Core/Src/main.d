@@ -37,74 +37,68 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/wifi.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_conf.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_io.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/stm32l475e_iot01.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTClient.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTConnect.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPublish.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTSubscribe.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTUnsubscribe.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTFormat.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/timer_interface.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/timer_platform.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/Network.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/timing.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_core.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_wifi.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_address.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_class_extension.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_cellular.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_connect.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf_template.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_errors.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_custom.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net_sockets.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net_sockets.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls_entropy.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/wifi.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_conf.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_io.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/stm32l475e_iot01.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTClient.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTConnect.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPublish.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTSubscribe.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTUnsubscribe.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTFormat.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/timer_interface.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/timer_platform.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/Network.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_mbedtls.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/check_config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl_ciphersuites.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdsa.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform_util.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crt.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/asn1.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crl.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdh.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/entropy.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ctr_drbg.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/certs.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/error.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/debug.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/timing.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_core.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_wifi.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_address.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_class_extension.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_cellular.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_connect.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_conf.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_conf_template.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_errors.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_custom.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_mbedtls.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_sockets.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_sockets.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/mbedtls_entropy.h \
  ../Core/Inc/dfsdm.h ../Core/Inc/main.h ../Core/Inc/i2c.h \
  ../Core/Inc/quadspi.h ../Core/Inc/rng.h ../Core/Inc/spi.h \
  ../Core/Inc/usart.h ../Core/Inc/usb_otg.h ../Core/Inc/gpio.h
@@ -187,141 +181,129 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/wifi.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/wifi.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_conf.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_conf.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/es_wifi_io.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/es_wifi_io.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/wifi_Inc/stm32l475e_iot01.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/wifi_Inc/stm32l475e_iot01.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTClient.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTClient.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPacket.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPacket.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTConnect.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTConnect.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTPublish.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTPublish.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTSubscribe.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTSubscribe.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTUnsubscribe.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTUnsubscribe.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/MQTTFormat.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/MQTTFormat.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/StackTrace.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/StackTrace.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/timer_interface.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/timer_interface.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/timer_platform.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/timer_platform.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/MQTT_Inc/Network.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/MQTT_Inc/Network.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_mbedtls.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/check_config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl_ciphersuites.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdsa.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform_util.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crt.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/asn1.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crl.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdh.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/entropy.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ctr_drbg.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/certs.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/error.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/debug.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/timing.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/timing.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_core.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_core.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_wifi.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_wifi.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_address.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_address.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_class_extension.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_class_extension.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_cellular.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_cellular.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_connect.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_connect.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_conf.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_conf_template.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_conf_template.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_errors.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_errors.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_custom.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_custom.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/net_mbedtls.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_mbedtls.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net_sockets.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_sockets.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/net_sockets.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/debug.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/certs.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/net_sockets.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h:
-
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls_entropy.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/mbedtls_entropy.h:
 
 ../Core/Inc/dfsdm.h:
 

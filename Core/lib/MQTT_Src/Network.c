@@ -22,7 +22,6 @@ uint16_t nlen;
 int net_read(Network* n, unsigned char* buffer, int len, int timeout_ms) {
 
 	int ret;
-	//ret = mbedtls_net_recv(0, buffer,(size_t)len,(uint32_t)timeout_ms);
 	ret = mbedtls_ssl_read(&ssl, buffer,(size_t)len);
 	return ret;
 }

@@ -35,6 +35,7 @@ extern "C" {
  * The platform specific timer header that defines the Timer struct
  */
 #include "timer_platform.h"
+#include "stm32l4xx_hal.h"
 
 #include <stdint.h>
 #include <stdbool.h>

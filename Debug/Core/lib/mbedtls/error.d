@@ -1,178 +1,178 @@
 Core/lib/mbedtls/error.o: ../Core/lib/mbedtls/error.c \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/arc4.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/base64.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/blowfish.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/camellia.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ccm.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chacha20.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chachapoly.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/poly1305.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chacha20.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/des.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/gcm.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/hkdf.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/hmac_drbg.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md5.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/oid.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/padlock.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pem.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pkcs12.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pkcs5.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/poly1305.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ripemd160.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha1.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha256.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h \
- /home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/xtea.h
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/check_config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/error.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/arc4.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/base64.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/blowfish.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform_util.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/camellia.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ccm.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chacha20.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chachapoly.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/poly1305.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chacha20.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ctr_drbg.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/des.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/entropy.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/gcm.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/hkdf.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/hmac_drbg.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md5.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/oid.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/asn1.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdsa.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/padlock.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pem.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pkcs12.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pkcs5.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/poly1305.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ripemd160.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha1.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha256.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl_ciphersuites.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crt.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crl.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdh.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h \
+ C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/xtea.h
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/check_config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/check_config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/error.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/error.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/config.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/config.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/arc4.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/arc4.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/base64.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/base64.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/blowfish.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/blowfish.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/platform_util.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/platform_util.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/camellia.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/camellia.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ccm.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ccm.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chacha20.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chacha20.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chachapoly.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chachapoly.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/poly1305.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/poly1305.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/chacha20.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/chacha20.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/cipher.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/cipher.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ctr_drbg.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ctr_drbg.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/aes.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/aes.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/des.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/des.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/bignum.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/bignum.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/entropy.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/entropy.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/gcm.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/gcm.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/hkdf.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/hkdf.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/hmac_drbg.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/hmac_drbg.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/md5.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/md5.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/oid.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/oid.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/asn1.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/asn1.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecp.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecp.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdsa.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdsa.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/padlock.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/padlock.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pem.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pem.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pk.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pk.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pkcs12.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pkcs12.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/pkcs5.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/pkcs5.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/poly1305.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/poly1305.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ripemd160.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ripemd160.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/rsa.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/rsa.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha1.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha1.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha256.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha256.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/sha512.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/sha512.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ssl_ciphersuites.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ssl_ciphersuites.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crt.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crt.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509_crl.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509_crl.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/dhm.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/dhm.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/ecdh.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/ecdh.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/x509.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/x509.h:
 
-/home/cocco/STM32CubeIDE/workspace_1.2.0/prova2/Core/lib/mbedtls/xtea.h:
+C:/Users/cocco/OneDrive/Documents/Dottorato/Ricerca/Pleinair/Core/lib/mbedtls/xtea.h:
