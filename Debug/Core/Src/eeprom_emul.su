@@ -1,0 +1,6 @@
+eeprom_emul.c:26:6:ee_init	8	static
+eeprom_emul.c:41:6:ee_format	40	static
+eeprom_emul.c:85:6:ee_read	32	static
+eeprom_emul.c:108:6:ee_write	48	static
+eeprom_emul.c:146:6:ee_writeToRam	24	static
+eeprom_emul.c:166:7:ee_commit	8	static

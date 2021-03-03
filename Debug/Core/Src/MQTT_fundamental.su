@@ -1,0 +1,5 @@
+MQTT_fundamental.c:10:6:MQTT_setup	136	static
+MQTT_fundamental.c:72:9:request_time	40	static
+MQTT_fundamental.c:91:9:send_data	4072	static
+MQTT_fundamental.c:161:6:data_arrived	32	dynamic
+MQTT_fundamental.c:170:6:time_arrived	88	dynamic

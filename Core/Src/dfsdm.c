@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -63,11 +63,11 @@ void HAL_DFSDM_ChannelMspInit(DFSDM_Channel_HandleTypeDef* dfsdm_channelHandle)
   /* USER CODE END DFSDM1_MspInit 0 */
     /* DFSDM1 clock enable */
     __HAL_RCC_DFSDM1_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOE_CLK_ENABLE();
-    /**DFSDM1 GPIO Configuration    
+    /**DFSDM1 GPIO Configuration
     PE7     ------> DFSDM1_DATIN2
-    PE9     ------> DFSDM1_CKOUT 
+    PE9     ------> DFSDM1_CKOUT
     */
     GPIO_InitStruct.Pin = DFSDM1_DATIN2_Pin|DFSDM1_CKOUT_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -94,10 +94,10 @@ void HAL_DFSDM_ChannelMspDeInit(DFSDM_Channel_HandleTypeDef* dfsdm_channelHandle
   /* USER CODE END DFSDM1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_DFSDM1_CLK_DISABLE();
-  
-    /**DFSDM1 GPIO Configuration    
+
+    /**DFSDM1 GPIO Configuration
     PE7     ------> DFSDM1_DATIN2
-    PE9     ------> DFSDM1_CKOUT 
+    PE9     ------> DFSDM1_CKOUT
     */
     HAL_GPIO_DeInit(GPIOE, DFSDM1_DATIN2_Pin|DFSDM1_CKOUT_Pin);
 
@@ -105,7 +105,7 @@ void HAL_DFSDM_ChannelMspDeInit(DFSDM_Channel_HandleTypeDef* dfsdm_channelHandle
 
   /* USER CODE END DFSDM1_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 

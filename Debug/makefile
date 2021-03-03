@@ -72,8 +72,8 @@ all: main-build
 main-build: connessione_TLS.elf secondary-outputs
 
 # Tool invocations
-connessione_TLS.elf: $(OBJS) $(USER_OBJS) C:\Users\cocco\OneDrive\Documents\Dottorato\Ricerca\Pleinair\STM32L475VGTX_FLASH.ld
-	arm-none-eabi-g++ -o "connessione_TLS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\cocco\OneDrive\Documents\Dottorato\Ricerca\Pleinair\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="connessione_TLS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+connessione_TLS.elf: $(OBJS) $(USER_OBJS) C:\Users\39389\Desktop\PLEINAIR\Pleinair\STM32L475VGTX_FLASH.ld
+	arm-none-eabi-g++ -o "connessione_TLS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\39389\Desktop\PLEINAIR\Pleinair\STM32L475VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="connessione_TLS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

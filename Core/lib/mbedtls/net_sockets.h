@@ -258,8 +258,7 @@ void mbedtls_net_usleep( unsigned long usec );
  *                 non-blocking. Handling timeouts with non-blocking reads
  *                 requires a different strategy.
  */
-int mbedtls_net_recv_timeout( void *ctx, unsigned char *buf, size_t len,
-                      uint32_t timeout );
+//int mbedtls_net_recv_timeout( void *ctx, unsigned char *buf, size_t len, uint32_t timeout );
 
 /**
  * \brief          Gracefully shutdown the connection and free associated data

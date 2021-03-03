@@ -66,10 +66,14 @@ int net_mbedtls_start(net_socket_t *sockhnd );
 int net_mbedtls_stop(net_socket_t *sockhnd);
 int net_mbedtls_sock_recv(net_socket_t *sockhnd, uint8_t * buf, size_t len);
 int net_mbedtls_sock_send( net_socket_t *sockhnd, const uint8_t * buf, size_t len);
-int mbedtls_net_send(void *ctx, const unsigned char *buf, size_t len);
-int mbedtls_net_recv(void *ctx, unsigned char *buf, size_t len, uint32_t timeout);
+//int mbedtls_net_send(void *ctx, const unsigned char *buf, size_t len);
+//int mbedtls_net_recv(void *ctx, unsigned char *buf, size_t len, uint32_t timeout);
 bool net_mbedtls_check_tlsdata(net_socket_t *sockhnd);
 void net_mbedtls_set_read_timeout(net_socket_t *sock);
+int bl475eiota2_tls_recv(void *ctx, unsigned char *buf, size_t len);
+int bl475eiota2_tls_recv_timeout(void *ctx, unsigned char *buf, size_t len, uint32_t timeout);
+int bl475eiota2_tls_send(void *ctx, const unsigned char *buf, size_t len);
+
 
 extern int mbedtls_hardware_poll( void *data, unsigned char *output, size_t len, size_t *olen );
 

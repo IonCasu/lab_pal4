@@ -1,2 +1,0 @@
-net_sockets.c:676:6:mbedtls_net_init	16	static
-net_sockets.c:681:5:mbedtls_net_connect	64	static

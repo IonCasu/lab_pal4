@@ -1,0 +1,3 @@
+TLS_fundamental.c:35:6:Net_TLS_Init	24	static
+TLS_fundamental.c:95:6:Net_TLS_DeInit	8	static
+TLS_fundamental.c:111:15:TLS_connect	560	static

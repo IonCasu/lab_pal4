@@ -1,8 +1,9 @@
-main.c:225:6:messageArrived	24	static
-main.c:233:6:messageTimeArrived	24	static
-main.c:244:13:my_debug	40	static
-main.c:266:5:main	4784	static
-main.c:653:6:SystemClock_Config	232	static
-main.c:726:6:HAL_GPIO_EXTI_Callback	16	static
-main.c:742:6:SPI3_IRQHandler	8	static
-main.c:752:6:Error_Handler	4	static
+main.c:145:5:main	112	static
+main.c:505:6:SystemClock_Config	232	static
+main.c:582:6:HAL_GPIO_EXTI_Callback	16	static
+main.c:598:6:SPI3_IRQHandler	8	static
+main.c:609:6:hts221_temp_humidity_read	48	static
+main.c:642:6:hts221_setup	32	static
+main.c:696:6:rtc_alarm_setup	64	static
+main.c:724:6:tim16_setup	80	static
+main.c:750:6:Error_Handler	4	static

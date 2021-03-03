@@ -50,55 +50,12 @@ extern "C" {
  */
 typedef struct Timer Timer;
 
-/**
- * @brief Check if a timer is expired
- *
- * Call this function passing in a timer to check if that timer has expired.
- *
- * @param Timer - pointer to the timer to be checked for expiration
- * @return bool - true = timer expired, false = timer not expired
- */
-bool has_timer_expired(Timer *);
+char TimerIsExpired(Timer*);
+void TimerCountdownMS(Timer*, unsigned int);
+void TimerCountdown(Timer*, unsigned int);
+int TimerLeftMS(Timer*);
 
-/**
- * @brief Create a timer (milliseconds)
- *
- * Sets the timer to expire in a specified number of milliseconds.
- *
- * @param Timer - pointer to the timer to be set to expire in milliseconds
- * @param uint32_t - set the timer to expire in this number of milliseconds
- */
-void countdown_ms(Timer *, uint32_t);
-
-/**
- * @brief Create a timer (seconds)
- *
- * Sets the timer to expire in a specified number of seconds.
- *
- * @param Timer - pointer to the timer to be set to expire in seconds
- * @param uint32_t - set the timer to expire in this number of seconds
- */
-void countdown_sec(Timer *, uint32_t);
-
-/**
- * @brief Check the time remaining on a given timer
- *
- * Checks the input timer and returns the number of milliseconds remaining on the timer.
- *
- * @param Timer - pointer to the timer to be set to checked
- * @return int - milliseconds left on the countdown timer
- */
-uint32_t left_ms(Timer *);
-
-/**
- * @brief Initialize a timer
- *
- * Performs any initialization required to the timer passed in.
- *
- * @param Timer - pointer to the timer to be initialized
- */
-void TimerInit(Timer *);
-
+void TimerInit(Timer*);
 #ifdef __cplusplus
 }
 #endif

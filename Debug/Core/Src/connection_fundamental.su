@@ -1,0 +1,6 @@
+connection_fundamental.c:9:5:board_wifi_init	88	static
+connection_fundamental.c:61:15:ClientConnectNViaDNS	40	static
+connection_fundamental.c:84:6:network_init	16	static
+connection_fundamental.c:91:5:net_read	32	static
+connection_fundamental.c:98:5:net_write	32	static
+connection_fundamental.c:105:6:net_disconnect	16	static

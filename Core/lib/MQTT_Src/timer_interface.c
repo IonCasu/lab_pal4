@@ -27,56 +27,55 @@ extern "C" {
 #include <stdbool.h>
 #include "timer_interface.h"
   
-void sleep(int DelaySec);
-void TimerCountdownMS(Timer* timer, uint32_t timeout_ms);
-void TimerCountdown(Timer* timer, uint32_t timeout);
-uint32_t TimerLeftMS(Timer* timer);
-bool TimerIsExpired(Timer* timer);
-void TimerInit(Timer* timer);
+unsigned long MilliTimer;
+unsigned long sysSeconds=0;
+unsigned long sysMinutes=0;
+unsigned long sysHours=0;
 
+void HAL_IncTick(void)
+{
+	uwTick += uwTickFreq;
+	MilliTimer++;
 
+	if(uwTick % 1000 ==0){
+		sysSeconds++;
+		if(sysSeconds % 60 == 0){
+			sysMinutes++;
+			sysSeconds = 0;
+			if(sysMinutes % 60 == 0){
+				sysHours++;
+				sysMinutes = 0;
+			}
+		}
+	}
+}
   
-bool TimerIsExpired(Timer *timer) {
-  return (TimerLeftMS(timer) > 0) ? false : true;
+char TimerIsExpired(Timer* timer)
+{
+	long left = timer->end_time - MilliTimer;
+	return (left < 0);
 }
 
-void TimerCountdownMS(Timer *timer, uint32_t timeout) {
-  uint32_t tickstart = 0;
-
- // __disable_irq();
-
-  tickstart = HAL_GetTick();
-  timer->end_time = tickstart + timeout;
-
- // __enable_irq();
+void TimerCountdownMS(Timer* timer, unsigned int timeout)
+{
+	timer->end_time = MilliTimer + timeout;
 }
 
-uint32_t TimerLeftMS(Timer *timer) {
-  uint32_t tickstart = 0;
-
- // __disable_irq();
-
-  tickstart = HAL_GetTick();
-  long left = timer->end_time - tickstart;
-
-  //__enable_irq();
-
-  return (left < 0) ? 0 : left;
+int TimerLeftMS(Timer* timer)
+{
+	long left = timer->end_time - MilliTimer;
+	return (left < 0) ? 0 : left;
 }
 
-void TimerCountdown(Timer *timer, uint32_t timeout) {
-  uint32_t tickstart = 0;
 
-  //__disable_irq();
- 
-  tickstart = HAL_GetTick();
-  timer->end_time = tickstart + (timeout * 1000);
- 
- // __enable_irq();
-} 
+void TimerCountdown(Timer* timer, unsigned int timeout)
+{
+	timer->end_time = MilliTimer + (timeout * 1000);
+}
 
-void TimerInit(Timer *timer) {
-  timer->end_time = 0;
+void TimerInit(Timer* timer)
+{
+	timer->end_time = 0;
 }
 
 

@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
@@ -55,17 +55,17 @@ void HAL_QSPI_MspInit(QSPI_HandleTypeDef* qspiHandle)
   /* USER CODE END QUADSPI_MspInit 0 */
     /* QUADSPI clock enable */
     __HAL_RCC_QSPI_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOE_CLK_ENABLE();
-    /**QUADSPI GPIO Configuration    
+    /**QUADSPI GPIO Configuration
     PE10     ------> QUADSPI_CLK
     PE11     ------> QUADSPI_NCS
     PE12     ------> QUADSPI_BK1_IO0
     PE13     ------> QUADSPI_BK1_IO1
     PE14     ------> QUADSPI_BK1_IO2
-    PE15     ------> QUADSPI_BK1_IO3 
+    PE15     ------> QUADSPI_BK1_IO3
     */
-    GPIO_InitStruct.Pin = QUADSPI_CLK_Pin|QUADSPI_NCS_Pin|OQUADSPI_BK1_IO0_Pin|QUADSPI_BK1_IO1_Pin 
+    GPIO_InitStruct.Pin = QUADSPI_CLK_Pin|QUADSPI_NCS_Pin|OQUADSPI_BK1_IO0_Pin|QUADSPI_BK1_IO1_Pin
                           |QUAD_SPI_BK1_IO2_Pin|QUAD_SPI_BK1_IO3_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -89,23 +89,23 @@ void HAL_QSPI_MspDeInit(QSPI_HandleTypeDef* qspiHandle)
   /* USER CODE END QUADSPI_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_QSPI_CLK_DISABLE();
-  
-    /**QUADSPI GPIO Configuration    
+
+    /**QUADSPI GPIO Configuration
     PE10     ------> QUADSPI_CLK
     PE11     ------> QUADSPI_NCS
     PE12     ------> QUADSPI_BK1_IO0
     PE13     ------> QUADSPI_BK1_IO1
     PE14     ------> QUADSPI_BK1_IO2
-    PE15     ------> QUADSPI_BK1_IO3 
+    PE15     ------> QUADSPI_BK1_IO3
     */
-    HAL_GPIO_DeInit(GPIOE, QUADSPI_CLK_Pin|QUADSPI_NCS_Pin|OQUADSPI_BK1_IO0_Pin|QUADSPI_BK1_IO1_Pin 
+    HAL_GPIO_DeInit(GPIOE, QUADSPI_CLK_Pin|QUADSPI_NCS_Pin|OQUADSPI_BK1_IO0_Pin|QUADSPI_BK1_IO1_Pin
                           |QUAD_SPI_BK1_IO2_Pin|QUAD_SPI_BK1_IO3_Pin);
 
   /* USER CODE BEGIN QUADSPI_MspDeInit 1 */
 
   /* USER CODE END QUADSPI_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 

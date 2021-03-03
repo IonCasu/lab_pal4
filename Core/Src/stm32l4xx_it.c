@@ -23,6 +23,10 @@
 #include "stm32l4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "rtc.h"
+#include "macro_def.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +47,9 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
+uint16_t timer16Iterations = 0;
+uint16_t dataCollectIterations = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,13 +63,16 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern RTC_HandleTypeDef hrtc;
+extern TIM_HandleTypeDef htim16;
 /* USER CODE BEGIN EV */
+
+extern flags_t flags;
 
 /* USER CODE END EV */
 
 /******************************************************************************/
-/*           Cortex-M4 Processor Interruption and Exception Handlers          */ 
+/*           Cortex-M4 Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
   * @brief This function handles Non maskable interrupt.
@@ -229,6 +239,42 @@ void EXTI9_5_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles TIM1 update interrupt and TIM16 global interrupt.
+  */
+void TIM1_UP_TIM16_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 0 */
+
+  /* USER CODE END TIM1_UP_TIM16_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim16);
+  /* USER CODE BEGIN TIM1_UP_TIM16_IRQn 1 */
+
+  TERMOUT("from tim16 ISR: CONNECTION CHECK command\n");
+//  flags.connectionCheck = 1;
+
+  timer16Iterations++;
+
+  if(timer16Iterations==DATA_COLLECT_INTERVAL){
+	  TERMOUT("from tim16 ISR: COLLECT data command\n");
+	  flags.sensorDataRead=1;
+	  dataCollectIterations++;
+
+	  timer16Iterations=0;
+
+	  if(dataCollectIterations == DATA_SEND_INTERVAL){
+		  TERMOUT("from tim16 ISR: SEND data command\n");
+		  flags.sensorDataSend = 1;
+
+		  dataCollectIterations=0;
+	  }
+  }
+
+
+
+  /* USER CODE END TIM1_UP_TIM16_IRQn 1 */
+}
+
+/**
   * @brief This function handles EXTI line[15:10] interrupts.
   */
 void EXTI15_10_IRQHandler(void)
@@ -244,6 +290,26 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */
+}
+
+/**
+  * @brief This function handles RTC alarm interrupt through EXTI line 18.
+  */
+void RTC_Alarm_IRQHandler(void)
+{
+  /* USER CODE BEGIN RTC_Alarm_IRQn 0 */
+
+  /* USER CODE END RTC_Alarm_IRQn 0 */
+  HAL_RTC_AlarmIRQHandler(&hrtc);
+  /* USER CODE BEGIN RTC_Alarm_IRQn 1 */
+
+  /*Quando scatta l'allarme, imposto il flag a 1. Di conseguenza, nel while principale verrà richiesto il tempo al server
+   *e aggiornato l'RTC
+   */
+  flags.serverTimeRequest = 1;
+
+
+  /* USER CODE END RTC_Alarm_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

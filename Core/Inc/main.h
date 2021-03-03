@@ -32,26 +32,22 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "wifi.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "stm32l475e_iot01.h"
-#include "stdio.h"
-#include "MQTTClient.h"
-#include "net_mbedtls.h"
 
-#include "mbedtls/net.h"
-#include "mbedtls/ssl.h"
-#include "mbedtls/entropy.h"
-#include "mbedtls/ctr_drbg.h"
-#include "mbedtls/debug.h"
-#include "mbedtls/certs.h"
-#include "mbedtls/net_sockets.h"
-#include "mbedtls/error.h"
-#include "mbedtls_entropy.h"
+#include "MQTT_fundamental.h"
+#include "connection_fundamental.h"
+#include "TLS_fundamental.h"
+#include "macro_def.h"
+
 
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+
 
 /* USER CODE END ET */
 
@@ -69,7 +65,13 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-void mbedtls_net_init(mbedtls_net_context *ctx);
+
+void hts221_temp_humidity_read(int32_t *temperature, int32_t *humidity);
+void hts221_setup(void);
+void rtc_alarm_setup(uint8_t ora, uint8_t minuti, uint8_t secondi);
+void tim16_setup(uint32_t irq_interval);
+void HAL_IncTick(void);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -240,6 +242,30 @@ void mbedtls_net_init(mbedtls_net_context *ctx);
 #define ISM43362_DRDY_EXTI1_GPIO_Port GPIOE
 #define ISM43362_DRDY_EXTI1_EXTI_IRQn EXTI1_IRQn
 /* USER CODE BEGIN Private defines */
+
+//HTS221 DEFINES
+#define HTS221_DEVICE_ID_WRITE	0XBE
+#define HTS221_DEVICE_ID_READ	0XBF
+#define HTS221_WHO_AM_I 		0X0F
+#define HTS221_AV_CONF 			0X10
+#define HTS221_CTRL_REG_1		0X20
+#define HTS221_CTRL_REG_2		0X21
+#define HTS221_CTRL_REG_3		0X22
+#define HTS221_STATUS_REG		0X27
+#define HTS221_HUMIDITY_OUT_L	0X28
+#define HTS221_HUMIDITY_OUT_H	0X29
+#define HTS221_TEMP_OUT_L		0X2A
+#define HTS221_TEMP_OUT_H		0X2B
+#define HTS221_CALIB_0			0X30
+
+
+typedef struct {
+	unsigned int serverTimeRequest:1;
+	unsigned int connectionCheck:1;
+	unsigned int sensorDataRead:1;
+	unsigned int sensorDataSend:1;
+	unsigned int opInCorso:1;
+}flags_t;
 
 /* USER CODE END Private defines */
 

@@ -18,7 +18,15 @@
   */
 #include "net_connect.h"
 #include "net_internals.h"
+#include "Network.h"
 #ifdef NET_MBEDTLS_HOST_SUPPORT
+#define MYTLS_SEND_DEFAULTINTERVAL 			30000
+#define MYTLS_RECV_DEFAULTINTERVAL 			30000
+#define MYTLS_MAXTIMEOUT		   			32767
+
+#define MY_ES_WIFI_MAX_SINGLE_READ_LEN		ES_WIFI_PAYLOAD_SIZE
+#define MY_ES_WIFI_MAX_SINGLE_SEND_LEN		ES_WIFI_PAYLOAD_SIZE
+#define MY_ES_WIFI_MAX_PAYLOAD				ES_WIFI_DATA_SIZE-800
 
 int mbedtls_rng_poll_cb( void *data, unsigned char *output, size_t len, size_t *olen );
 
@@ -489,7 +497,8 @@ static void mbedtls_free_resource(net_socket_t *sock)
  *                 requires a different strategy.
  */
 
-int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t timeout) {
+/* Implementata da Federico*/
+/*int mbedtls_net_recv_timeout(void *ctx, unsigned char *buffer, size_t len, uint32_t timeout) {
 
 	int ret = 0;
 	uint16_t c = 0;
@@ -522,7 +531,7 @@ int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t time
 		ret = -1;
 	}
 	return ret;
-}
+}*/
 
 
 /*int mbedtls_net_send(void *ctx, const unsigned char *buf, size_t len)
@@ -567,7 +576,8 @@ int mbedtls_net_recv(void *ctx, unsigned char *buffer, size_t len, uint32_t time
  *                 MBEDTLS_ERR_SSL_WANT_WRITE indicates write() would block.
  */
 
-int mbedtls_net_send(void *ctx,const unsigned char *buffer, size_t len) {
+/* Implementata da Federico*/
+/*int mbedtls_net_send(void *ctx,const unsigned char *buffer, size_t len) {
 
 	int ret = 0;
 	uint16_t c = 0;
@@ -600,6 +610,130 @@ int mbedtls_net_send(void *ctx,const unsigned char *buffer, size_t len) {
 		ret = -1;
 	}
 	return ret;
+}*/
+
+/**
+  * @brief  TLS network write callback.
+  * @param  ctx: Pointer to void, provide context for the call.
+  * @param  buf: Pointer to unsigned char buffer holding the outbound data.
+  * @param  len: size of the buffer.
+  * @retval number of bytes written
+  */
+int bl475eiota2_tls_send(void *ctx, const unsigned char *buf, size_t len)
+{
+	WIFI_Status_t ret;
+	uint16_t sentLen = 0;
+	Network* n = (Network*) ctx;
+
+	if( len>MY_ES_WIFI_MAX_PAYLOAD )
+	{
+		printf("ERROR: the requested read is greater than the maximum allowed buffer ()!\nSkipping receive command");
+		return -1;
+	}
+	size_t residual_sentLen = len;
+	size_t iter_sentLen = 0;
+	size_t already_sent = 0;
+	unsigned char *curr_buf = (unsigned char *) buf;
+	while(residual_sentLen>0)
+	{
+		sentLen = 0;
+		// Limit read to MY_ES_WIFI_MAX_PAYLOAD bytes
+		iter_sentLen = (residual_sentLen>MY_ES_WIFI_MAX_SINGLE_SEND_LEN) ? MY_ES_WIFI_MAX_SINGLE_SEND_LEN : residual_sentLen;
+		ret = WIFI_SendData((uint8_t) n->my_socket, curr_buf, (uint16_t) iter_sentLen, &sentLen, MYTLS_SEND_DEFAULTINTERVAL);
+		if(ret!=WIFI_STATUS_OK)
+		{
+			return -1;
+		}
+		already_sent += sentLen;
+		residual_sentLen -= sentLen;
+		curr_buf += sentLen;
+	}
+	return (int) already_sent;
+}
+/**
+  * @brief  TLS network read with timeout callback.
+  * @param  ctx: Pointer to void, provide context for the call.
+  * @param  buffer: Pointer to unsigned char buffer, to be filled.
+  * @param  len: size of the buffer.
+  * @param  timeout: timeout for giving in read.
+  * @retval number of bytes read
+  */
+int bl475eiota2_tls_recv_timeout(void *ctx, unsigned char *buf, size_t len, uint32_t timeout)
+{
+	WIFI_Status_t ret;
+	uint16_t recvLen = 0;
+	Network* n = (Network*) ctx;
+	if( len>MY_ES_WIFI_MAX_PAYLOAD )
+	{
+		printf("ERROR: the requested read is greater than the maximum allowed buffer ()!\nSkipping receive command");
+		return -1;
+	}
+	size_t residual_recvLen = len;
+	size_t iter_recvLen = 0;
+	size_t already_recv = 0;
+	unsigned char *curr_buf = buf;
+	while(residual_recvLen>0)
+	{
+		recvLen = 0;
+		// Limit read to MY_ES_WIFI_MAX_PAYLOAD bytes
+		iter_recvLen = (residual_recvLen>MY_ES_WIFI_MAX_SINGLE_READ_LEN) ? MY_ES_WIFI_MAX_SINGLE_READ_LEN : residual_recvLen;
+		ret = WIFI_ReceiveData((uint8_t) n->my_socket, curr_buf, (uint16_t) iter_recvLen, &recvLen, timeout);
+		if(ret!=WIFI_STATUS_OK)
+		{
+			return -1;
+		}
+		if (recvLen==0)
+		{
+			return 0;
+		}
+		already_recv += recvLen;
+		residual_recvLen -= recvLen;
+		curr_buf += recvLen;
+	}
+	return (int) already_recv;
+}
+
+/**
+  * @brief  TLS network read callback.
+  * @param  ctx: Pointer to void, provide context for the call.
+  * @param  buffer: Pointer to unsigned char buffer, to be filled.
+  * @param  len: size of the buffer.
+  * @retval number of bytes read
+  */
+int bl475eiota2_tls_recv(void *ctx, unsigned char *buf, size_t len)
+{
+	WIFI_Status_t ret;
+	uint16_t recvLen = 0;
+	Network* n = (Network*) ctx;
+	if( len>MY_ES_WIFI_MAX_PAYLOAD )
+	{
+		printf("ERROR: the requested read is greater than the maximum allowed buffer ()!\nSkipping receive command");
+		return -1;
+	}
+	size_t residual_recvLen = len;
+	size_t iter_recvLen = 0;
+	size_t already_recv = 0;
+	unsigned char *curr_buf = buf;
+	while(residual_recvLen>0)
+	{
+		recvLen = 0;
+		// Limit read to MY_ES_WIFI_MAX_PAYLOAD bytes
+		iter_recvLen = (residual_recvLen>MY_ES_WIFI_MAX_SINGLE_READ_LEN) ? MY_ES_WIFI_MAX_SINGLE_READ_LEN : residual_recvLen;
+		ret = WIFI_ReceiveData((uint8_t) n->my_socket, curr_buf, (uint16_t) iter_recvLen, &recvLen, MYTLS_RECV_DEFAULTINTERVAL);
+		if(ret!=WIFI_STATUS_OK)
+		{
+			return -1;
+		}
+		if (recvLen==0)
+		{
+			return 0;
+		}
+		already_recv += recvLen;
+		residual_recvLen -= recvLen;
+		curr_buf += recvLen;
+	}
+
+	return (int) already_recv;
 }
 
 #endif
